@@ -42,7 +42,7 @@ class LogicHero:
 
     @staticmethod
     def update_hero(heroes, blocks, entities, monsters):
-        if not heroes.exist():
+        if not heroes.not_exist():
             for block in blocks:
                 if isinstance(block, BonusBlock):
                     if block.change_ability:
@@ -81,7 +81,7 @@ class LogicHero:
 
     @staticmethod
     def contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters):
-        if not heroes.exist():
+        if not heroes.not_exist():
             for block in blocks:
 
                 if isinstance(hero, Hero) and hero.super_hero:

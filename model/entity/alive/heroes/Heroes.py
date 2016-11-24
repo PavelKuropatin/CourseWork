@@ -12,7 +12,7 @@ class Heroes:
     def lst(self, value = []):
         self.__lst = value
 
-    def exist(self):
+    def not_exist(self):
         if isinstance(self, Heroes):
             for i in self.lst:
                 if i.lifes != 0:

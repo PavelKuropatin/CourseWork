@@ -1,25 +1,29 @@
 import pygame,sys
 from pygame import *
 
-from model.entity.alive.heroes.Heroes import Heroes
+from model.entity.alive.heroes import Heroes
 from view.ViewBackgound import View
 
 
 class LogicMenu:
 
     @staticmethod
-    def get_points_menu():
-        return [(270, 200, u'1 Player', 1),
-                (270, 300, u'2 Players', 2),
-                (270, 400, u'Settings', 3),
-                (270, 500, u'Exit', 4),
-                (200, 100, u'Welcome To Mario!', 0)]
+    def render(points, surface, font, num_point):
+        for i in points:
+            if num_point == i[3] and num_point != 0:
+                surface.blit(font.render(i[2], 1, (250, 30, 250)), (i[0], i[1]))
+            else:
+                surface.blit(font.render(i[2], 1, (250, 250, 30)), (i[0], i[1]))
 
     @staticmethod
-    def menu(background, window):
+    def menu(background, window, settings):
+        points = [(270, 200, u'1 Player', 1),
+                            (270, 300, u'2 Players', 2),
+                            (270, 400, u'Settings', 3),
+                            (270, 500, u'Exit', 4),
+                            (200, 100, u'Welcome To Mario!', 0)]
         font_menu = pygame.font.Font('data/coders_crux.ttf', 70)
         point = 1
-        points = LogicMenu.get_points_menu()
         View.fill_view(background, (0, 100, 200))
         while True:
             LogicMenu.render(points, background, font_menu, point)
@@ -36,14 +40,21 @@ class LogicMenu:
                         if point < len(points):
                             point += 1
                     if e.key == 13:
-                        if point in [1, 2, 3, 4]:
+                        if point == 1 or point == 2:
                             return point
+                        if point == 3:
+                            LogicMenu.settings(background, window, settings)
+                            View.fill_view(background, (0, 100, 200))
+                        if point == 4:
+                            sys.exit()
             View.blit_view(window, background, 0, 0)
             pygame.display.flip()
 
     @staticmethod
-    def get_settings_points_menu(settings):
-        return [[250, 100, u'%s' % chr(settings[0]), 1],
+    def settings(background, window, settings):
+        font_menu = pygame.font.Font('data/coders_crux.ttf', 60)
+        point = 1
+        points = [[250, 100, u'%s' % chr(settings[0]), 1],
                 [250, 170, u'%s' % chr(settings[1]), 2],
                 [250, 240, u'%s' % chr(settings[2]), 3],
                 [250, 310, u'%s' % chr(settings[3]), 4],
@@ -61,12 +72,6 @@ class LogicMenu:
                 [70, 100, u'Up', 0],
                 [70, 170, u'Left', 0],
                 [70, 240, u'Right', 0]]
-
-    @staticmethod
-    def settings(background, window, settings):
-        font_menu = pygame.font.Font('data/coders_crux.ttf', 60)
-        point = 1
-        points = LogicMenu.get_settings_points_menu(settings)
         View.fill_view(background, (0, 100, 200))
         while True:
             LogicMenu.render(points, background, font_menu, point)
@@ -75,7 +80,7 @@ class LogicMenu:
                     sys.exit()
                 if e.type == KEYDOWN:
                     if e.key == K_ESCAPE:
-                        LogicMenu.menu(background, window)
+                        LogicMenu.menu(background, window, settings)
                         return
                     if e.key == K_UP:
                         if point > 0:
@@ -91,30 +96,21 @@ class LogicMenu:
                                 points[point-1][2] = u'%s' % string
                             View.fill_view(background, (0, 100, 200))
                         if point == 9:
-                            LogicMenu.menu(background, window)
+                            LogicMenu.menu(background, window, settings)
                             return
             View.blit_view(window, background, 0, 0)
             pygame.display.flip()
-
-
-
-
-
-
-    @staticmethod
-    def get_points_during_menu():
-        return [(250, 200, u'Settings', 1),
-                (250, 300, u'Back to Game', 2),
-                (250, 400, u'Finish Game', 3),
-                (250, 500, u'Exit', 4),
-                (330, 100, u'Menu', 0)]
 
     @staticmethod
     def during_game_menu(background, window, heroes):
         if isinstance(heroes, Heroes):
             font_menu = pygame.font.Font('data/coders_crux.ttf', 70)
             point = 1
-            points = LogicMenu.get_points_during_menu()
+            points = [(250, 200, u'Settings', 1),
+                                (250, 300, u'Back to Game', 2),
+                                (250, 400, u'Finish Game', 3),
+                                (250, 500, u'Exit', 4),
+                                (330, 100, u'Menu', 0)]
             View.fill_view(background, (0, 100, 200))
             while True:
                 LogicMenu.render(points, background, font_menu, point)
@@ -131,38 +127,18 @@ class LogicMenu:
                             if point < len(points):
                                 point += 1
                         if e.key == 13:
-                            if point in [1, 2 ,3, 4]:
+                            if point == 1:
+                                LogicMenu.settings_during_game(background, window, heroes)
+                                View.fill_view(background, (0, 100, 200))
+                            if point == 2:
+                                return
+                            if point == 3:
                                 return point
+                            if point == 4:
+                                sys.exit()
+
                 View.blit_view(window, background, 0, 0)
                 pygame.display.flip()
-
-    @staticmethod
-    def get_settings_points_during_menu(heroes):
-        points = [[70, 380, u'Back', 1],
-                  [250, 100, u'%s' % chr(heroes.lst[0].key_up), 2],
-                  [250, 170, u'%s' % chr(heroes.lst[0].key_left), 3],
-                  [250, 240, u'%s' % chr(heroes.lst[0].key_right), 4],
-                  [250, 310, u'%s' % chr(heroes.lst[0].key_fire), 5]]
-        if len(heroes.lst) == 2:
-            LogicMenu.add(points, [550, 100, u'%s' % chr(heroes.lst[1].key_up), 6],
-                          [550, 170, u'%s' % chr(heroes.lst[1].key_left), 7],
-                          [550, 240, u'%s' % chr(heroes.lst[1].key_right), 8],
-                          [550, 310, u'%s' % chr(heroes.lst[1].key_fire), 9],
-                          [70, 100, u'Up', 0],
-                          [70, 170, u'Left', 0],
-                          [70, 240, u'Right', 0],
-                          [70, 310, u'Fire', 0],
-                          [250, 30, u'1 Player', 0],
-                          [550, 30, u'2 Player', 0])
-        else:
-            LogicMenu.add(points, [70, 100, u'Up', 0],
-                          [70, 170, u'Left', 0],
-                          [70, 240, u'Right', 0],
-                          [70, 310, u'Fire', 0],
-                          [250, 30, u'1 Player', 0])
-            if heroes.lst[0].type == "hero2":
-                points[7][2] = u'2 Player'
-        return points
 
     @staticmethod
     def settings_during_game( background, window, heroes):
@@ -170,9 +146,30 @@ class LogicMenu:
             font_menu = pygame.font.Font('data/coders_crux.ttf', 60)
             point = 0
             View.fill_view(background, (0, 100, 200))
-
-            points = LogicMenu.get_settings_points_during_menu(heroes)
-
+            points = [[70, 380, u'Back', 1],
+                                [250, 100, u'%s' % chr(heroes.lst[0].key_up), 2],
+                                [250, 170, u'%s' % chr(heroes.lst[0].key_left), 3],
+                                [250, 240, u'%s' % chr(heroes.lst[0].key_right), 4],
+                                [250, 310, u'%s' % chr(heroes.lst[0].key_fire), 5]]
+            if len(heroes.lst) == 2:
+                LogicMenu.add(points, [550, 100, u'%s' % chr(heroes.lst[1].key_up), 6],
+                              [550, 170, u'%s' % chr(heroes.lst[1].key_left), 7],
+                              [550, 240, u'%s' % chr(heroes.lst[1].key_right), 8],
+                              [550, 310, u'%s' % chr(heroes.lst[1].key_fire), 9],
+                              [70, 100, u'Up', 0],
+                              [70, 170, u'Left', 0],
+                              [70, 240, u'Right', 0],
+                              [70, 310, u'Fire', 0],
+                              [250, 30, u'1 Player', 0],
+                              [550, 30, u'2 Player', 0])
+            else:
+                LogicMenu.add(points, [70, 100, u'Up', 0],
+                              [70, 170, u'Left', 0],
+                              [70, 240, u'Right', 0],
+                              [70, 310, u'Fire', 0],
+                              [250, 30, u'1 Player', 0])
+                if heroes.lst[0].type == "hero2":
+                        points[7][2] = u'2 Player'
             View.fill_view(background, (0, 100, 200))
             while True:
                 LogicMenu.render(points, background, font_menu, point)
@@ -216,30 +213,6 @@ class LogicMenu:
                                     View.fill_view(background, (0, 100, 200))
                 View.blit_view(window, background, 0, 0)
                 pygame.display.flip()
-
-
-
-
-
-    @staticmethod
-    def update_settings(heroes, settings):
-        settings[0]=heroes.lst[0].key_up
-        settings[1]=heroes.lst[0].key_left
-        settings[2]=heroes.lst[0].key_right
-        settings[3]=heroes.lst[0].key_fire
-        if len(heroes.lst)!=1:
-            settings[4]=heroes.lst[1].key_up
-            settings[5]=heroes.lst[1].key_left
-            settings[6]=heroes.lst[1].key_right
-            settings[7]=heroes.lst[1].key_fire
-
-    @staticmethod
-    def render(points, surface, font, num_point):
-        for i in points:
-            if num_point == i[3] and num_point != 0:
-                surface.blit(font.render(i[2], 1, (250, 30, 250)), (i[0], i[1]))
-            else:
-                surface.blit(font.render(i[2], 1, (250, 250, 30)), (i[0], i[1]))
 
     @staticmethod
     def replace_button(points, i, settings):
@@ -340,24 +313,24 @@ class LogicMenu:
         return False
 
     @staticmethod
+    def get_key_press():
+        for e in pygame.event.get():
+            if e.type == KEYDOWN:
+                return e.key
+            else:
+                return False
+
+    @staticmethod
     def add(points, *args):
         for item in args:
             points.append(item)
 
-    # @staticmethod
-    # def get_key_press():
-    #     for e in pygame.event.get():
-    #         if e.type == KEYDOWN:
-    #             return e.key
-    #         else:
-    #             return False
-    #
-    # @staticmethod
-    # def show_lifes(lst, background):
-    #     string = []
-    #     for e in lst:
-    #         string.append(u'%s - %d\n'%(e.type, e.lifes))
-    #     print(string)
-    #     font_menu = pygame.font.Font('data/coders_crux.ttf', 70)
-    #     for e in string:
-    #             background.blit(font_menu.render(e, 1, (250, 30, 250)), (100,200))
+    @staticmethod
+    def show_lifes(lst, background):
+        string = []
+        for e in lst:
+            string.append(u'%s - %d\n'%(e.type, e.lifes))
+        print(string)
+        font_menu = pygame.font.Font('data/coders_crux.ttf', 70)
+        for e in string:
+                background.blit(font_menu.render(e, 1, (250, 30, 250)), (100,200))
