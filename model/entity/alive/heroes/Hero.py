@@ -5,11 +5,10 @@ import pygame
 
 class Hero(Character):
 
-    def __init__(self,  x=0, y=0, width=0, height=0, keys=[], type='', name_image='',
-                        side=False, power=1, lifes=3, super_hero=False,
-                        time_flower_activity=0,
-                        left=False, right=False, up=False, on_ground=False, xvel=0, yvel=0,
-                        move_speed=4, jump_power=16, gravity=1):
+    def __init__(self,  x=0, y=0, width=0, height=0, keys=[], type='', name_image='', side=False, power=0, lifes=0,
+                 super_hero=False, time_flower_activity=0, left=False, right=False, up=False, on_ground=False, xvel=0,
+                 yvel=0, move_speed=0, jump_power=0, gravity=0):
+
         super().__init__(x, y, width, height, left, right, up, on_ground, xvel, yvel, move_speed, gravity, lifes)
         self.__type = type
         self.__side = side

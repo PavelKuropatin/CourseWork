@@ -16,10 +16,13 @@ from model.entity.alive.heroes.Heroes import Heroes
 class LogicGame:
 
     @staticmethod
-    def startGameWindow(settings, background, background_color, window, timer):
+    def start_game_window(background, background_color, window, timer):
+        settings = [119, 97, 100, 102, 105, 106, 108, 59]
 
         while True:
+
             choice = LogicMenu.menu(background, window)
+
             if choice == 1 or choice == 2:
                 entities = pygame.sprite.Group()
                 nature = pygame.sprite.Group()
@@ -28,13 +31,17 @@ class LogicGame:
                 heroes = Heroes()
 
                 hero1 = Hero(x=170, y=170, width=22, height=28, keys=settings[:4], type="hero1",
-                             name_image='mario/hero1.png')
+                             name_image='mario/hero1.png',side=False, power=1, lifes=3, super_hero=False,
+                             time_flower_activity=0, left=False, right=False, up=False, on_ground=False, xvel=0, yvel=0,
+                             move_speed=4, jump_power=16, gravity=1)
                 heroes.append(hero1)
                 entities.add(hero1)
 
                 if choice == 2:
                     hero2 = Hero(x=270, y=170, width=22, height=28, keys=settings[4:], type="hero2",
-                                 name_image='mario/hero2.png')
+                                 name_image='mario/hero2.png',side=False, power=1, lifes=3, super_hero=False,
+                                 time_flower_activity=0, left=False, right=False, up=False, on_ground=False, xvel=0,
+                                 yvel=0, move_speed=4, jump_power=16, gravity=1)
                     heroes.append(hero2)
                     entities.add(hero2)
 
@@ -42,12 +49,12 @@ class LogicGame:
                 entities.add(live)
 
                 Level.show(entities, platforms, monsters, nature)
-                level_width = len(Level.level[len(Level.level) - 1]) * Level.PLATFORM_WIDTH
-                level_height = len(Level.level) * Level.PLATFORM_HEIGHT
+                level_width = len(Level.level[len(Level.level) - 1]) * Level.platform_width()
+                level_height = len(Level.level) * Level.platform_height()
                 camera = Camera(level_width, level_height)
 
-                LogicGame.startGame(settings, background, background_color, window, timer, heroes, entities, monsters,
-                                    platforms, nature, camera)
+                LogicGame.start_game(settings, background, background_color, window, timer, heroes, entities, monsters,
+                                     platforms, nature, camera)
 
             if choice == 3:
                 LogicMenu.settings(background, window, settings)
@@ -57,8 +64,9 @@ class LogicGame:
                 sys.exit()
 
     @staticmethod
-    def startGame(settings,background, background_color, window, timer, heroes, entities, monsters,
-                                          platforms, nature, camera):
+    def start_game(settings,background, background_color, window, timer, heroes, entities, monsters, platforms, nature,
+                  camera):
+
         while True:
 
             timer.tick(60)
@@ -66,12 +74,15 @@ class LogicGame:
 
             if button:
                 choice = LogicMenu.during_game_menu(background, window, heroes)
+
                 if choice == 1:
                     LogicMenu.settings_during_game(background, window, heroes)
                     View.fill_view(background, (0, 100, 200))
+
                 if choice == 3:
                     LogicMenu.update_settings(heroes, settings)
                     break
+
                 if choice == 4:
                     sys.exit()
 

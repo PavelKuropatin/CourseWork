@@ -5,7 +5,7 @@ from model.entity.dead.Platform import Platform
 
 class SimpleBlock(Platform):
 
-    def __init__(self, x=0, y=0, width=0, height=0, image='', image_damage='', life=2):
+    def __init__(self, x=0, y=0, width=0, height=0, image='', image_damage='', life=0):
         super().__init__(x, y, width, height)
         self.__image_damage=image_damage
         self.image = pygame.image.load(image)

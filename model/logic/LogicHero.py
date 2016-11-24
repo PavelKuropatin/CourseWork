@@ -163,7 +163,6 @@ class LogicHero:
                         LogicHero.contact_flower(hero, block, blocks, entities)
                         LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
                         break
-        # return False
 
     @staticmethod
     def contact_flower(hero, block, blocks, entities):
@@ -210,11 +209,13 @@ class LogicHero:
     def create_fire(hero, entities, monsters):
         if isinstance(hero, Hero):
             if hero.side:
-                fireball = Fire(x=hero.rect.x-10, y=hero.rect.y+(hero.height//2), width=7, height=6, image='blocks/fireball.png', side=hero.side)
+                fireball = Fire(x=hero.rect.x-10, y=hero.rect.y+(hero.height//2), width=7, height=6,
+                                image='blocks/fireball.png', side=hero.side, power=1, xvel=0, yvel=0, gravity=1,
+                                move_speed=5, left=True, right=False, up=False, on_ground=False, max_way=96, changing=True)
 
             else:
                 fireball = Fire(x=hero.rect.x+hero.width, y=hero.rect.y + (hero.height // 2), width=7, height=6,
-                                image= 'blocks/fireball.png',
-                                side=hero.side)
+                                image= 'blocks/fireball.png', side=hero.side, power=1, xvel=0, yvel=0, gravity=1,
+                                move_speed=5, left=True, right=False, up=False, on_ground=False, max_way=96, changing=True)
             entities.add(fireball)
             monsters.add(fireball)

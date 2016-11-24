@@ -3,7 +3,7 @@ from pygame import Surface, Rect, sprite
 
 class Platform(sprite.Sprite):
 
-    def __init__(self, x, y, width, height):
+    def __init__(self, x=0, y=0, width=0, height=0):
         sprite.Sprite.__init__(self)
         self.image = Surface((width, height))
         self.rect = Rect(x, y, width, height)

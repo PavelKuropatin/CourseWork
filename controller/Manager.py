@@ -17,11 +17,9 @@ def main():
     pygame.display.set_caption("Mario")
     background = Surface((win_width, win_height))
     View.fill_view(background, background_color)
-
-    settings = [119, 97, 100, 102, 105, 106, 108, 59]
-
     timer = pygame.time.Clock()
-    LogicGame.startGameWindow(settings, background, background_color, window, timer)
+
+    LogicGame.start_game_window(background, background_color, window, timer)
 
 
 if __name__ == "__main__":

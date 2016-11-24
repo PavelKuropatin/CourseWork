@@ -9,9 +9,18 @@ from model.entity.dead.SimpleBlock import SimpleBlock
 
 class Level:
 
-    PLATFORM_WIDTH = 32
-    PLATFORM_HEIGHT = 32
+    __platform_width = 32
+    __platform_height = 32
     level = []
+
+    @staticmethod
+    def platform_width():
+        return Level.__platform_width
+
+    @staticmethod
+    def platform_height():
+        return Level.__platform_height
+
     @staticmethod
     def show(entities, platforms, monsters, nature):
         x = y = 0
@@ -22,26 +31,33 @@ class Level:
 
         for row in Level.level:
             for symbol in row:
+
                 if symbol == "0":
                     item = Nature(x=x, y=y, width=64, height=48, image='blocks/cloud.png')
                     nature.add(item)
+
                 if symbol == "1":
                     item = Nature(x=x, y=y, width=128, height=32, image='blocks/bush-1.png')
                     nature.add(item)
+
                 if symbol == "2":
                     item = Nature(x=x, y=y, width=96, height=32, image='blocks/bush-2.png')
                     nature.add(item)
+
                 if symbol == "3":
                     item = Nature(x=x, y=y, width=64, height=32, image='blocks/bush-3.png')
                     nature.add(item)
+
                 if symbol == "4":
                     item = Ground(x=x, y=y, width=64, height=64, image='blocks/pipe_greensmall.png')
                     entities.add(item)
                     platforms.append(item)
+
                 if symbol == "5":
                     item = Ground(x=x, y=y, width=64, height=96, image='blocks/pipe_green.png')
                     entities.add(item)
                     platforms.append(item)
+
                 if symbol == "6":
                     item = Ground(x=x, y=y, width=64, height=128, image='blocks/pipe_greenbig.png')
                     entities.add(item)
@@ -49,43 +65,45 @@ class Level:
 
 
                 if symbol == "-":
-                    item = SimpleBlock(x=x, y=y,width=Level.PLATFORM_WIDTH, height=Level.PLATFORM_HEIGHT,
-                                       image='blocks/block_2.png', image_damage='blocks/block_1.png')
+                    item = SimpleBlock(x=x, y=y,width=Level.platform_width(), height=Level.platform_height(),
+                                       image='blocks/block_2.png', image_damage='blocks/block_1.png', life=2)
                     entities.add(item)
                     platforms.append(item)
+
                 if symbol == ".":
-                    item = Ground(x=x, y=y, width=Level.PLATFORM_WIDTH, height=Level.PLATFORM_HEIGHT,
+                    item = Ground(x=x, y=y, width=Level.platform_width(), height=Level.platform_height(),
                                   image='blocks/platform.jpg')
                     entities.add(item)
                     platforms.append(item)
+
                 if symbol == "?":
-                    item = BonusBlock(x=x, y=y, width=Level.PLATFORM_WIDTH, height=Level.PLATFORM_HEIGHT,
+                    item = BonusBlock(x=x, y=y, width=Level.platform_width(), height=Level.platform_height(),
                                       images=['blocks/bonus_block_active_1.png', 'blocks/bonus_block_active_2.png'],
-                                      image_simple='blocks/bonus_block_simple.png',
-                                      koef=20, activity=True,
+                                      image_simple='blocks/bonus_block_simple.png', koef=20, activity=True,
                                       change_ability=True, type_bonus=1)
                     entities.add(item)
                     platforms.append(item)
+
                 if symbol == "s":
-                    item = Slub(x=x, y=y, width=Level.PLATFORM_WIDTH, height=Level.PLATFORM_HEIGHT,
-                                images_existing=['enemies/simple_enemy/slub1.png',
-                                                 'enemies/simple_enemy/slub2.png'],
-                                image_killed='enemies/simple_enemy/slub3.png',
-                                koef=49)
+                    item = Slub(x=x, y=y, width=Level.platform_width(), height=Level.platform_height(),
+                                images_existing=['enemies/simple_enemy/slub1.png', 'enemies/simple_enemy/slub2.png'],
+                                image_killed='enemies/simple_enemy/slub3.png', koef=49, lifes=1, max_way=96, xvel=0,
+                                yvel=0, gravity=1, move_speed=1,  left=True, right=False, up=False, on_ground=False,
+                                changing=True)
                     monsters.add(item)
                     entities.add(item)
                     platforms.append(item)
+
                 if symbol == "b":
                     item = Bowser(x=x, y=y, width=48, height=48, images_existing=[['enemies/bowser/bowser1_left.png',
-                                                                                   'enemies/bowser/bowser2_left.png'],
-                                                                                   ['enemies/bowser/bowser1_right.png',
-                                                                                   'enemies/bowser/bowser2_right.png']],
-                                                                 image_killed=['enemies/bowser/bowser1_left_die.png',
-                                                                               'enemies/bowser/bowser1_right_die.png'],
-                                  koef=9, side=True)
+                                  'enemies/bowser/bowser2_left.png'],['enemies/bowser/bowser1_right.png',
+                                  'enemies/bowser/bowser2_right.png']], image_killed=['enemies/bowser/bowser1_left_die.png',
+                                  'enemies/bowser/bowser1_right_die.png'],koef=9, side=True, lifes=5, max_way=96, xvel=0,
+                                  yvel=0, gravity=1, move_speed=1, left=True, right=False, up=False, on_ground=False,
+                                  changing=True)
                     monsters.add(item)
                     entities.add(item)
                     platforms.append(item)
-                x += Level.PLATFORM_WIDTH
-            y += Level.PLATFORM_HEIGHT
+                x += Level.platform_width()
+            y += Level.platform_height()
             x = 0

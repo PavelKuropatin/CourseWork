@@ -4,8 +4,9 @@ from model.entity.alive.Character import Character
 
 class Monster(Character):
 
-    def __init__(self, x=0, y=0, width=0, height=0,images_existing=[], image_killed='', lifes=0, koef=0, xvel=0, yvel=0,
-                 gravity=1, move_speed=1,left=True, right=False, up=False, on_ground = False,  max_way=96,  changing=True):
+    def __init__(self, x=0, y=0, width=0, height=0,images_existing=[], image_killed='', lifes=0, koef=0, max_way=0,
+                 xvel=0, yvel=0, gravity=0, move_speed=0,left=False, right=False, up=False, on_ground=False,
+                 changing=False):
 
         super().__init__(x, y, width, height, left, right, up, on_ground, xvel, yvel, move_speed, gravity, lifes)
         self.__max_way = max_way

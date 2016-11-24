@@ -5,8 +5,8 @@ from model.entity.alive.Character import Character
 
 class Fire(Character):
 
-        def __init__(self, x=0, y=0, width=0, height=0, image='', side=False, power=1, xvel=0, yvel=0, gravity=1,
-                     move_speed=5, left=True, right=False, up=False, on_ground=False, max_way=96, changing=True):
+        def __init__(self, x=0, y=0, width=0, height=0, image='', side=False, power=0, xvel=0, yvel=0, gravity=0,
+                     move_speed=0, left=False, right=False, up=False, on_ground=False, max_way=0, changing=False):
 
             super().__init__(x, y, width, height, left, right, up, on_ground, xvel, yvel, move_speed, gravity)
             self.image = pygame.image.load(image)

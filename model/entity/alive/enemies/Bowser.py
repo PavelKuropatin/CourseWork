@@ -5,9 +5,13 @@ from model.entity.alive.enemies.Monster import Monster
 
 
 class Bowser(Monster):
-    def __init__(self, x=0, y=0, width=0, height=0, images_existing=[], image_killed='', koef=9, side=True, lifes=5):
+    def __init__(self, x=0, y=0, width=0, height=0, images_existing=[], image_killed='', koef=0, side=False, lifes=0,
+                 max_way=0, xvel=0, yvel=0, gravity=0, move_speed=0, left=False, right=False, up=False, on_ground=False,
+                 changing=False):
 
-        super().__init__(x, y, width, height, images_existing, image_killed,  lifes, koef)
+        # super().__init__(x, y, width, height, images_existing, image_killed,  lifes, koef, max_way)
+        super().__init__(x, y, width, height, images_existing, image_killed,  lifes, koef, max_way, xvel, yvel, gravity,
+                         move_speed, left, right, up, on_ground, changing)
         self.__side = side
 
     @property

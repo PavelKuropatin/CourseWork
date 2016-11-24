@@ -1,7 +1,7 @@
 from pygame import Rect
 
 class Camera:
-    def __init__(self, width, height):
+    def __init__(self, width=0, height=0):
         self.__window = Rect(0, 0, width, height)
 
     @property

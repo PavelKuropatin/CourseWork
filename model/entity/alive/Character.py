@@ -3,10 +3,8 @@ from pygame import *
 
 class Character(sprite.Sprite):
 
-    def __init__(self,  x=0, y=0, width=0, height=0,
-                         left=False, right=False, up=False,
-                        on_ground=False, xvel=0, yvel=0, move_speed=0,
-                        gravity=0,lifes=0):
+    def __init__(self,  x=0, y=0, width=0, height=0, left=False, right=False, up=False, on_ground=False, xvel=0, yvel=0,
+                 move_speed=0, gravity=0, lifes=0):
 
         sprite.Sprite.__init__(self)
         self.__lifes = lifes
