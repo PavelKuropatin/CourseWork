@@ -35,11 +35,32 @@ class Heroes:
         hero.lifes = -1
         if hero.lifes == 0:
             entities.remove(hero)
-            if hero.type == "hero2":
-                self.lst.pop(0)
+            self.lst.remove(hero)
+            del hero
         else:
             hero.move_to_start()
 
+    def get_lives(self):
+        array=[]
+        for hero in self.lst:
+            if hero.fire_ability and hero.flower_ability:
+                array.append('{0} - {1}  Jump - {2}  Fire - {3}'.format(hero.type, hero.lifes, hero.time_flower_activity // 10000, hero.time_mushroom_activity//10000))
+            elif hero.fire_ability and not hero.flower_ability:
+                array.append('{0} - {1}  Fire - {2}'.format(hero.type, hero.lifes, hero.time_mushroom_activity //10000))
+            elif hero.flower_ability and not hero.fire_ability:
+                array.append('{0} - {1}  Jump - {2}'.format(hero.type, hero.lifes, hero.time_flower_activity // 10000))
+            else:
+                array.append('{0} - {1}'.format(hero.type, hero.lifes))
+                                           # u'\u2764'* hero.lifes))
+        return array
+
+
+    def update_keys(self, settings):
+        for i in range(len(self.lst)):
+            self.lst[i].key_up=settings[0+i*4]
+            self.lst[i].key_left=settings[i*4+1]
+            self.lst[i].key_right=settings[i*4+2]
+            self.lst[i].key_fire=settings[i*4+3]
 
 
 

@@ -17,3 +17,8 @@ class Platform(sprite.Sprite):
     @property
     def y(self):
         return self.__y
+
+    def killed(self, entities, blocks):
+        entities.remove(self)
+        blocks.remove(self)
+        del self

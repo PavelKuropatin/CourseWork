@@ -8,6 +8,8 @@ from model.entity.alive.enemies.Slub import Slub
 from model.entity.alive.heroes.Hero import Hero
 from model.entity.dead.BonusBlock import BonusBlock
 from model.entity.dead.Flower import Flower
+from model.entity.dead.Mushroom import Mushroom
+from model.entity.dead.Bonus import Bonus
 from model.entity.dead.SimpleBlock import SimpleBlock
 
 
@@ -20,7 +22,7 @@ class LogicHero:
                 if e.type == QUIT:
                     sys.exit()
                 if e.type == KEYDOWN:
-                    if e.key == hero.key_fire:
+                    if e.key == hero.key_fire and hero.fire_ability:
                         LogicHero.create_fire(hero, entities, monsters)
                     if e.key == hero.key_left:
                         hero.left = True
@@ -47,11 +49,11 @@ class LogicHero:
                 if isinstance(block, BonusBlock):
                     if block.change_ability:
                             block.change_image()
-                if isinstance(block, Flower):
+                if isinstance(block, Bonus):
                     if block.amount_images_appearing != 0:
-                        block.appear_flower()
+                        block.appear_bonus()
                     else:
-                        block.exist_flower()
+                        block.exist_bonus()
             for hero in heroes.lst:
                 if hero.up:
                     if hero.on_ground:
@@ -84,12 +86,7 @@ class LogicHero:
         if not heroes.not_exist():
             for block in blocks:
 
-                if isinstance(hero, Hero) and hero.super_hero:
-
-                    if hero.time_flower_activity == 0:
-                        hero.get_simple_sump()
-
-                    hero.time_activity = -1
+                hero.update()
 
                 if sprite.collide_rect(hero, block):
 
@@ -99,8 +96,9 @@ class LogicHero:
                                 heroes.killed(hero, entities)
                                 return True
 
-                        if isinstance(block, Flower) and block.activity:
-                            LogicHero.contact_flower(hero, block, blocks, entities)
+                        if isinstance(block, Bonus):
+                        # if isinstance(block, Bonus) and block.activity:
+                            LogicHero.contact_bonus(hero, block, blocks, entities)
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
                             break
 
@@ -113,8 +111,9 @@ class LogicHero:
                                 heroes.killed(hero, entities)
                                 return True
 
-                        if isinstance(block, Flower) and block.activity:
-                            LogicHero.contact_flower(hero, block, blocks, entities)
+                        if isinstance(block, Bonus):
+                        # if isinstance(block, Bonus) and block.activity:
+                            LogicHero.contact_bonus(hero, block, blocks, entities)
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
                             break
 
@@ -135,8 +134,9 @@ class LogicHero:
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
                             break
 
-                        if isinstance(block, Flower) and block.activity:
-                            LogicHero.contact_flower(hero, block, blocks, entities)
+                        if isinstance(block, Bonus):
+                        # if isinstance(block, Bonus) and block.activity:
+                            LogicHero.contact_bonus(hero, block, blocks, entities)
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
                             break
 
@@ -160,18 +160,26 @@ class LogicHero:
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
                             break
 
-                        LogicHero.contact_flower(hero, block, blocks, entities)
+                        LogicHero.contact_bonus(hero, block, blocks, entities)
                         LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
                         break
 
     @staticmethod
-    def contact_flower(hero, block, blocks, entities):
+    def contact_bonus(hero, block, blocks, entities):
+      if isinstance(block, Bonus):
+
+        if isinstance(block, Mushroom):
+            hero.time_mushroom_activity = block.time_activity
+            hero.fire_ability = True
+            # block.activity = False
 
         if isinstance(block, Flower):
-            hero.get_super_jump(1.2, block.time_activity)
-            block.activity = False
-            entities.remove(block)
-            blocks.remove(block)
+            hero.get_super_jump(block.flower_value)
+            hero.time_flower_activity = block.time_activity
+            hero.flower_ability = True
+            # block.activity = False
+        entities.remove(block)
+        blocks.remove(block)
 
     @staticmethod
     def contact_bonus_blocks(blocks, block, entities):
@@ -180,27 +188,37 @@ class LogicHero:
             block.make_simple()
             bonus = None
             if block.type_bonus == 1:
-                bonus = Flower(x=block.x + 3, y=block.y - 59, width=26, height=27,
-                               start_image='blocks/flower_appear/flower_1.png',
-                               images_appearing=['blocks/flower_appear/flower_27.png',
-                                         'blocks/flower_appear/flower_25.png',
-                                         'blocks/flower_appear/flower_23.png',
-                                         'blocks/flower_appear/flower_21.png',
-                                         'blocks/flower_appear/flower_19.png',
-                                         'blocks/flower_appear/flower_17.png',
-                                         'blocks/flower_appear/flower_15.png',
-                                         'blocks/flower_appear/flower_13.png',
-                                         'blocks/flower_appear/flower_11.png',
-                                         'blocks/flower_appear/flower_9.png',
-                                         'blocks/flower_appear/flower_7.png',
-                                         'blocks/flower_appear/flower_5.png',
-                                         'blocks/flower_appear/flower_3.png',
-                                         'blocks/flower_appear/flower_1.png'],
-                               images_existing=['blocks/flower_exist_day/flower_1.png',
-                                        'blocks/flower_exist_day/flower_2.png',
-                                        'blocks/flower_exist_day/flower_3.png',
-                                        'blocks/flower_exist_day/flower_4.png'],
-                               time_activity=250000)
+                bonus = Flower(x=block.x + 3, y=block.y - 59, width=26, height=27, start_image='blocks/flower_appear/flower_1.png',
+                               images_appearing=['blocks/flower_appear/flower_27.png', 'blocks/flower_appear/flower_25.png',
+                                'blocks/flower_appear/flower_23.png', 'blocks/flower_appear/flower_21.png',
+                                'blocks/flower_appear/flower_19.png', 'blocks/flower_appear/flower_17.png',
+                                'blocks/flower_appear/flower_15.png', 'blocks/flower_appear/flower_13.png',
+                                'blocks/flower_appear/flower_11.png', 'blocks/flower_appear/flower_9.png',
+                                'blocks/flower_appear/flower_7.png', 'blocks/flower_appear/flower_5.png',
+                                'blocks/flower_appear/flower_3.png', 'blocks/flower_appear/flower_1.png'],
+                               images_existing=['blocks/flower_exist_day/flower_1.png', 'blocks/flower_exist_day/flower_2.png',
+                               'blocks/flower_exist_day/flower_3.png', 'blocks/flower_exist_day/flower_4.png'],
+                               koef=30, time_activity=350000, flower_value=1.2, change_ability=True)
+            if block.type_bonus == 2:
+                bonus = Mushroom(x=block.x + 3, y=block.y - 59, width=26, height=27,
+                               start_image='blocks/mushroom_appear/mushroom_1.png',
+                               images_appearing=['blocks/mushroom_appear/mushroom_27.png',
+                                                 'blocks/mushroom_appear/mushroom_25.png',
+                                                 'blocks/mushroom_appear/mushroom_23.png',
+                                                 'blocks/mushroom_appear/mushroom_21.png',
+                                                 'blocks/mushroom_appear/mushroom_19.png',
+                                                 'blocks/mushroom_appear/mushroom_17.png',
+                                                 'blocks/mushroom_appear/mushroom_15.png',
+                                                 'blocks/mushroom_appear/mushroom_13.png',
+                                                 'blocks/mushroom_appear/mushroom_11.png',
+                                                 'blocks/mushroom_appear/mushroom_9.png',
+                                                 'blocks/mushroom_appear/mushroom_7.png',
+                                                 'blocks/mushroom_appear/mushroom_5.png',
+                                                 'blocks/mushroom_appear/mushroom_3.png',
+                                                 'blocks/mushroom_appear/mushroom_1.png'],
+                               images_existing=['blocks/mushroom_exist_day/mushroom_1.png',
+                                                'blocks/mushroom_exist_day/mushroom_2.png'],
+                                koef=30, time_activity=350000, change_ability=True)
             if bonus:
                 blocks.append(bonus)
                 entities.add(bonus)
@@ -212,10 +230,9 @@ class LogicHero:
                 fireball = Fire(x=hero.rect.x-10, y=hero.rect.y+(hero.height//2), width=7, height=6,
                                 image='blocks/fireball.png', side=hero.side, power=1, xvel=0, yvel=0, gravity=1,
                                 move_speed=5, left=True, right=False, up=False, on_ground=False, max_way=96, changing=True)
-
             else:
                 fireball = Fire(x=hero.rect.x+hero.width, y=hero.rect.y + (hero.height // 2), width=7, height=6,
-                                image= 'blocks/fireball.png', side=hero.side, power=1, xvel=0, yvel=0, gravity=1,
+                                image='blocks/fireball.png', side=hero.side, power=1, xvel=0, yvel=0, gravity=1,
                                 move_speed=5, left=True, right=False, up=False, on_ground=False, max_way=96, changing=True)
             entities.add(fireball)
             monsters.add(fireball)

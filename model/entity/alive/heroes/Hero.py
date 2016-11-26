@@ -6,8 +6,9 @@ import pygame
 class Hero(Character):
 
     def __init__(self,  x=0, y=0, width=0, height=0, keys=[], type='', name_image='', side=False, power=0, lifes=0,
-                 super_hero=False, time_flower_activity=0, left=False, right=False, up=False, on_ground=False, xvel=0,
-                 yvel=0, move_speed=0, jump_power=0, gravity=0):
+                 super_hero=False, time_flower_activity=0, time_mushroom_activity=0, left=False, right=False, up=False,
+                 on_ground=False, xvel=0, yvel=0, move_speed=0, jump_power=0, gravity=0, fire_ability=False,
+                 flower_ability=False):
 
         super().__init__(x, y, width, height, left, right, up, on_ground, xvel, yvel, move_speed, gravity, lifes)
         self.__type = type
@@ -15,7 +16,9 @@ class Hero(Character):
         self.__power = power
         self.__super_hero = super_hero
         self.__time_flower_activity = time_flower_activity
-
+        self.__time_mushroom_activity = time_mushroom_activity
+        self.__fire_ability = fire_ability
+        self.__flower_ability = flower_ability
         self.__jump_power = jump_power
 
         self.__key_up = keys[0]
@@ -29,6 +32,22 @@ class Hero(Character):
         return self.__type
 
     @property
+    def fire_ability(self):
+        return self.__fire_ability
+
+    @fire_ability.setter
+    def fire_ability(self, value):
+        self.__fire_ability = value\
+
+    @property
+    def flower_ability(self):
+        return self.__flower_ability
+
+    @flower_ability.setter
+    def flower_ability(self, value):
+        self.__flower_ability = value
+
+    @property
     def power(self):
         return self.__power
 
@@ -39,7 +58,6 @@ class Hero(Character):
     @jump_power.setter
     def jump_power(self, value):
         self.__jump_power = value
-
 
     @power.setter
     def power(self, value):
@@ -65,10 +83,17 @@ class Hero(Character):
     def time_flower_activity(self):
         return self.__time_flower_activity
 
+    @property
+    def time_mushroom_activity(self):
+        return self.__time_mushroom_activity
+
+    @time_mushroom_activity.setter
+    def time_mushroom_activity(self, value=0):
+        self.__time_mushroom_activity += value
+
     @time_flower_activity.setter
     def time_flower_activity(self, value=0):
-        self.__time_flower_activity = value
-
+        self.__time_flower_activity += value
 
 
     @property
@@ -119,26 +144,30 @@ class Hero(Character):
         self.rect.x = self.x
         self.rect.y = self.y
 
+    def get_super_jump(self, value=0):
+        self.jump_power = int(self.jump_power * value)
 
-    def get_super_jump(self, value, bonus_time):
-        # self.rect.x = 801
-        # self.rect.y = 200
-        # self.rect.height = int(value * self.__HEIGHT)
-        # self.rect.width = int(value * self.__WIDTH)
-        # self.image = pygame.image.load('mario/hero1_up.png')
-        self.__jump_power = int(self.__jump_power * value)
-        self.time_flower_activity = bonus_time
+    def get_simple_jump(self, value=16):
+        self.jump_power = value
+        self.flower_ability = False
 
-    def get_simple_jump(self, value, bonus_time):
-        self.jump_power = 16
+    def set_fire_ability(self):
+        self.fire_ability = False
 
     def become_simple_mario(self):
-        # self.rect.x = 801
-        # self.rect.y = 200
-        # self.rect.height = int(value * self.__HEIGHT)
-        # self.rect.width = int(value * self.__WIDTH)
-        # self.image = pygame.image.load('mario/hero1_up.png')
-        self.__jump_power = 16
-        self.__power = 1
-        self.__super_hero = False
-        self.__time_flower_activity = 0
+        self.power = 1
+        self.time_flower_activity = 0
+
+    def update(self):
+        if isinstance(self, Hero):
+            if self.flower_ability:
+                if self.time_flower_activity == 0:
+                    self.get_simple_jump()
+                else:
+                    self.time_flower_activity = -1
+
+            if self.fire_ability:
+                if self.time_mushroom_activity == 0:
+                    self.set_fire_ability()
+                else:
+                    self.time_mushroom_activity = -1

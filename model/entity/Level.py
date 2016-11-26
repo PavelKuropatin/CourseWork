@@ -76,11 +76,19 @@ class Level:
                     entities.add(item)
                     platforms.append(item)
 
-                if symbol == "?":
+                if symbol == "f":
                     item = BonusBlock(x=x, y=y, width=Level.platform_width(), height=Level.platform_height(),
                                       images=['blocks/bonus_block_active_1.png', 'blocks/bonus_block_active_2.png'],
                                       image_simple='blocks/bonus_block_simple.png', koef=20, activity=True,
                                       change_ability=True, type_bonus=1)
+                    entities.add(item)
+                    platforms.append(item)
+
+                if symbol == "m":
+                    item = BonusBlock(x=x, y=y, width=Level.platform_width(), height=Level.platform_height(),
+                                      images=['blocks/bonus_block_active_1.png', 'blocks/bonus_block_active_2.png'],
+                                      image_simple='blocks/bonus_block_simple.png', koef=20, activity=True,
+                                      change_ability=True, type_bonus=2)
                     entities.add(item)
                     platforms.append(item)
 
