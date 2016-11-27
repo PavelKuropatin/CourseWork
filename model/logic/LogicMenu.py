@@ -1,7 +1,7 @@
 import pygame,sys
 from pygame import *
 
-from view.ViewBackgound import View
+from view.ViewBackgound import ViewBackground
 
 
 class LogicMenu:
@@ -18,7 +18,7 @@ class LogicMenu:
         array=heroes.get_lives()
         font_menu = pygame.font.Font(LogicMenu.font, LogicMenu.height_game)
         for i in range(len(array)):
-            View.blit_font(background,font_menu,array[i], 1, (0,0,0), background.get_width()//2+200*(i-1), 10)
+            ViewBackground.blit_font(background,font_menu,array[i], 1, (0,0,0), background.get_width()//2+200*(i-1), 10)
 
     @staticmethod
     def get_points_menu():
@@ -37,7 +37,7 @@ class LogicMenu:
         else:
             points = LogicMenu.get_points_menu()
 
-        View.fill_view(background, LogicMenu.background_color)
+        ViewBackground.fill_view(background, LogicMenu.background_color)
         while True:
             LogicMenu.render(points, background, font_menu, point)
             for e in pygame.event.get():
@@ -55,7 +55,7 @@ class LogicMenu:
                     if e.key == 13:
                         if point in [1, 2, 3, 4]:
                             return point
-            View.blit_view(window, background, 0, 0)
+            ViewBackground.blit_view(window, background, 0, 0)
             pygame.display.flip()
 
     @staticmethod
@@ -84,7 +84,7 @@ class LogicMenu:
         font_menu = pygame.font.Font(LogicMenu.font, LogicMenu.height_menu)
         point = 1
         points = LogicMenu.get_settings_points_menu(settings)
-        View.fill_view(background, LogicMenu.background_color)
+        ViewBackground.fill_view(background, LogicMenu.background_color)
         while True:
             LogicMenu.render(points, background, font_menu, point)
             for e in pygame.event.get():
@@ -110,14 +110,14 @@ class LogicMenu:
                             if string:
                                 settings[point - 1] = ord(string)
                                 points[point-1][2] = u'%s' % string
-                            View.fill_view(background, LogicMenu.background_color)
+                            ViewBackground.fill_view(background, LogicMenu.background_color)
                         if point == 1:
                             if during_game:
                                 LogicMenu.menu(background, window, during_game=True)
                                 return
                             LogicMenu.menu(background, window, during_game=False)
                             return
-            View.blit_view(window, background, 0, 0)
+            ViewBackground.blit_view(window, background, 0, 0)
             pygame.display.flip()
 
     @staticmethod
@@ -133,9 +133,9 @@ class LogicMenu:
         for punkt in punkts:
             x, y, text, point = punkt
             if num_point == point and num_point != 0:
-                View.blit_font(surface, font, text, 1, LogicMenu.color_active_text, x, y)
+                ViewBackground.blit_font(surface, font, text, 1, LogicMenu.color_active_text, x, y)
             else:
-                View.blit_font(surface, font, text, 1, LogicMenu.color_simple_text, x, y)
+                ViewBackground.blit_font(surface, font, text, 1, LogicMenu.color_simple_text, x, y)
 
     @staticmethod
     def replace_button(points, i, settings):

@@ -1,6 +1,5 @@
-import pygame
 
-class View:
+class ViewBackground:
 
     @staticmethod
     def fill_view(background, color):

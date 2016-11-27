@@ -10,13 +10,15 @@ from model.entity.dead.BonusBlock import BonusBlock
 from model.entity.dead.Flower import Flower
 from model.entity.dead.Mushroom import Mushroom
 from model.entity.dead.Bonus import Bonus
+from model.entity.dead.Castle import Castle
 from model.entity.dead.SimpleBlock import SimpleBlock
+
 
 
 class LogicHero:
 
     @staticmethod
-    def check_press_key(heroes, entities, blocks, monsters):
+    def check_press_key(heroes, entities, monsters):
         for e in pygame.event.get():
             for hero in heroes.lst:
                 if e.type == QUIT:
@@ -43,7 +45,7 @@ class LogicHero:
                         hero.up = False
 
     @staticmethod
-    def update_hero(heroes, blocks, entities, monsters):
+    def update_hero(heroes, blocks, entities, monsters, RESULT):
         if not heroes.not_exist():
             for block in blocks:
                 if isinstance(block, BonusBlock):
@@ -72,112 +74,90 @@ class LogicHero:
                     heroes.killed(hero, entities)
                     hero.move_to_start()
                     break
-                if LogicHero.contact_with_blocks(heroes, hero, 0, hero.yvel, blocks, entities, monsters):
-                    break
-                hero.rect.x += hero.xvel
-                if LogicHero.contact_with_blocks(heroes, hero, hero.xvel, 0, blocks, entities, monsters):
-                    break
 
-        else:
-            return
+                status_hero = LogicHero.contact_with_blocks(heroes, hero, 0, hero.yvel, blocks, entities, monsters)
+                if status_hero == True:
+                    RESULT[0]= True
+
+                hero.rect.x += hero.xvel
+                status_hero = LogicHero.contact_with_blocks(heroes, hero, hero.xvel, 0, blocks, entities, monsters)
+                if status_hero == True:
+                    RESULT[0]= True
 
     @staticmethod
     def contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters):
         if not heroes.not_exist():
             for block in blocks:
-
-                hero.update()
-
+                hero.update_bonus()
+                if isinstance(block, Castle):
+                    if block.rect.left - hero.rect.right < block.width:
+                        hero.jump_power=0
                 if sprite.collide_rect(hero, block):
-
                     if xvel > 0:
                         hero.rect.right = block.rect.left
                         if isinstance(block, Monster) and block.changing:
                                 heroes.killed(hero, entities)
-                                return True
-
+                                return False
                         if isinstance(block, Bonus):
-                        # if isinstance(block, Bonus) and block.activity:
                             LogicHero.contact_bonus(hero, block, blocks, entities)
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
                             break
-
                     if xvel < 0:
-
                         hero.rect.left = block.rect.right
-
                         if isinstance(block, Monster) and block.changing:
-
                                 heroes.killed(hero, entities)
-                                return True
-
+                                return False
                         if isinstance(block, Bonus):
-                        # if isinstance(block, Bonus) and block.activity:
                             LogicHero.contact_bonus(hero, block, blocks, entities)
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
                             break
-
                     if yvel > 0:
-
                         hero.rect.bottom = block.rect.top
                         hero.on_ground = True
                         hero.yvel = 0
-
                         if isinstance(block, Bowser) and block.changing:
                             heroes.killed(hero, entities)
-                            return True
-
+                            return False
                         if isinstance(block, Slub) and block.changing:
                             block.changing = False
                             block.lifes = -hero.power
                             block.killed(monsters, entities, blocks)
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
                             break
-
                         if isinstance(block, Bonus):
-                        # if isinstance(block, Bonus) and block.activity:
                             LogicHero.contact_bonus(hero, block, blocks, entities)
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
                             break
-
                     if yvel < 0:
-
                         hero.rect.top = block.rect.bottom
                         hero.yvel = 0
-
                         if isinstance(block, Monster) and block.changing:
                             heroes.killed(hero, entities)
-                            return True
-
+                            return False
                         if isinstance(block, SimpleBlock):
                             block.decrease_block_lives(hero.power, block, blocks, entities)
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
                             break
-
                         if isinstance(block, BonusBlock) and block.activity:
-
                             LogicHero.contact_bonus_blocks(blocks,block, entities)
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
                             break
-
                         LogicHero.contact_bonus(hero, block, blocks, entities)
                         LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
                         break
+                    if isinstance(block, Castle):
+                        return True
 
     @staticmethod
     def contact_bonus(hero, block, blocks, entities):
       if isinstance(block, Bonus):
-
         if isinstance(block, Mushroom):
             hero.time_mushroom_activity = block.time_activity
             hero.fire_ability = True
-            # block.activity = False
-
         if isinstance(block, Flower):
             hero.get_super_jump(block.flower_value)
             hero.time_flower_activity = block.time_activity
             hero.flower_ability = True
-            # block.activity = False
         entities.remove(block)
         blocks.remove(block)
 

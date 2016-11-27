@@ -51,9 +51,19 @@ class Heroes:
                 array.append('{0} - {1}  Jump - {2}'.format(hero.type, hero.lifes, hero.time_flower_activity // 10000))
             else:
                 array.append('{0} - {1}'.format(hero.type, hero.lifes))
-                                           # u'\u2764'* hero.lifes))
+                                           # u'\u2764'* hero.lifes
         return array
 
+    def set_default_settings(self):
+        for hero in self.lst:
+            hero.power = 1
+            hero.super_hero = False
+            hero.time_flower_activity = 0
+            hero.time_mushroom_activity = 0
+            hero.get_simple_jump()
+            hero.fire_ability = False
+            hero.flower_ability = False
+            hero.move_to_start()
 
     def update_keys(self, settings):
         for i in range(len(self.lst)):
@@ -61,6 +71,3 @@ class Heroes:
             self.lst[i].key_left=settings[i*4+1]
             self.lst[i].key_right=settings[i*4+2]
             self.lst[i].key_fire=settings[i*4+3]
-
-
-

@@ -1,4 +1,4 @@
-from pygame import sprite, Rect, Surface, time
+from pygame import time
 from model.entity.alive.Character import Character
 
 

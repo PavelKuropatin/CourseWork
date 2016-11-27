@@ -37,7 +37,7 @@ class Hero(Character):
 
     @fire_ability.setter
     def fire_ability(self, value):
-        self.__fire_ability = value\
+        self.__fire_ability = value
 
     @property
     def flower_ability(self):
@@ -146,6 +146,7 @@ class Hero(Character):
 
     def get_super_jump(self, value=0):
         self.jump_power = int(self.jump_power * value)
+        self.flower_ability = True
 
     def get_simple_jump(self, value=16):
         self.jump_power = value
@@ -154,12 +155,12 @@ class Hero(Character):
     def set_fire_ability(self):
         self.fire_ability = False
 
-    def become_simple_mario(self):
-        self.power = 1
-        self.time_flower_activity = 0
+    # def become_simple_mario(self):
+    #     self.power = 1
+    #     self.time_flower_activity = 0
 
-    def update(self):
-        if isinstance(self, Hero):
+    def update_bonus(self):
+        # if isinstance(self, Hero):
             if self.flower_ability:
                 if self.time_flower_activity == 0:
                     self.get_simple_jump()
