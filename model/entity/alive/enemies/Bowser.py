@@ -9,7 +9,6 @@ class Bowser(Monster):
                  max_way=0, xvel=0, yvel=0, gravity=0, move_speed=0, left=False, right=False, up=False, on_ground=False,
                  changing=False):
 
-        # super().__init__(x, y, width, height, images_existing, image_killed,  lifes, koef, max_way)
         super().__init__(x, y, width, height, images_existing, image_killed,  lifes, koef, max_way, xvel, yvel, gravity,
                          move_speed, left, right, up, on_ground, changing)
         self.__side = side
@@ -25,7 +24,6 @@ class Bowser(Monster):
     def change_image(self):
         if self.time_changing:
             if self.time_changing % self.koef == 0:
-                # pass
                 self.image = pygame.image.load(self.images_existing[int(not self.side)][self.time_changing // self.koef - 1])
             self.time_changing = -1
         else:

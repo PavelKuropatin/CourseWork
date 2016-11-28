@@ -20,20 +20,19 @@ class Fire(Character):
             return self.__max_way
 
         @property
-        def side(self):
-            return self.__side
-
-        @side.setter
-        def side(self, value):
-            self.__side = value
-        @property
         def power(self):
             return self.__power
 
         @property
+        def side(self):
+            return self.__side
+        @side.setter
+        def side(self, value):
+            self.__side = value
+
+        @property
         def changing(self):
             return self.__changing
-
         @changing.setter
         def changing(self, value=False):
             self.__changing = value

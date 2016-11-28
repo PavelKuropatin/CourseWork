@@ -24,9 +24,16 @@ class Character(sprite.Sprite):
         self.__gravity = gravity
 
     @property
+    def x(self):
+        return self.__x
+
+    @property
+    def y(self):
+        return self.__y
+
+    @property
     def width(self):
         return self.__width
-
     @width.setter
     def width(self, value):
         self.__width = value
@@ -34,31 +41,13 @@ class Character(sprite.Sprite):
     @property
     def height(self):
         return self.__height
-
     @height.setter
     def height(self, value):
         self.__height = value
 
     @property
-    def x(self):
-        return self.__x
-
-    @x.setter
-    def x(self, value):
-        self.__x = value
-
-    @property
-    def y(self):
-        return self.__y
-
-    @y.setter
-    def y(self, value):
-        self.__y = value
-
-    @property
     def lifes(self):
         return self.__lifes
-
     @lifes.setter
     def lifes(self, value):
         self.__lifes += value
@@ -66,7 +55,6 @@ class Character(sprite.Sprite):
     @property
     def left(self):
         return self.__left
-
     @left.setter
     def left(self, value):
         self.__left = value
@@ -74,7 +62,6 @@ class Character(sprite.Sprite):
     @property
     def right(self):
         return self.__right
-
     @right.setter
     def right(self, value):
         self.__right = value
@@ -82,7 +69,6 @@ class Character(sprite.Sprite):
     @property
     def up(self):
         return self.__up
-
     @up.setter
     def up(self, value):
         self.__up = value
@@ -90,7 +76,6 @@ class Character(sprite.Sprite):
     @property
     def gravity(self):
         return self.__gravity
-
     @gravity.setter
     def gravity(self, value):
         self.__gravity = value
@@ -98,7 +83,6 @@ class Character(sprite.Sprite):
     @property
     def on_ground(self):
         return self.__on_ground
-
     @on_ground.setter
     def on_ground(self, value):
         self.__on_ground = value
@@ -106,3 +90,7 @@ class Character(sprite.Sprite):
     @property
     def move_speed(self):
         return self.__move_speed
+
+    @move_speed.setter
+    def move_speed(self, value):
+        self.__move_speed = value

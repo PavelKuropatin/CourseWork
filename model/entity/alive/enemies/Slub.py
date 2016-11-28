@@ -1,6 +1,5 @@
 import pygame
 from pygame import *
-
 from model.entity.alive.enemies.Monster import Monster
 
 
@@ -10,17 +9,12 @@ class Slub(Monster):
                  xvel=0, yvel=0, gravity=0, move_speed=0, left=False, right=False, up=False, on_ground=False,
                  changing=False):
 
-        # super().__init__(x, y, width, height, images_existing, image_killed,  lifes, koef, max_way)
         super().__init__(x, y, width, height, images_existing, image_killed, lifes, koef, max_way, xvel, yvel, gravity,
                          move_speed, left, right, up, on_ground, changing)
-
-
-
 
     def change_image(self):
         if self.time_changing:
             if self.time_changing % self.koef == 0:
-                # pass
                 self.image = pygame.image.load(self.images_existing[self.time_changing//self.koef - 1])
             self.time_changing = -1
         else:

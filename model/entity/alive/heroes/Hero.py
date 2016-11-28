@@ -20,7 +20,6 @@ class Hero(Character):
         self.__fire_ability = fire_ability
         self.__flower_ability = flower_ability
         self.__jump_power = jump_power
-
         self.__key_up = keys[0]
         self.__key_left = keys[1]
         self.__key_right = keys[2]
@@ -34,7 +33,6 @@ class Hero(Character):
     @property
     def fire_ability(self):
         return self.__fire_ability
-
     @fire_ability.setter
     def fire_ability(self, value):
         self.__fire_ability = value
@@ -42,23 +40,20 @@ class Hero(Character):
     @property
     def flower_ability(self):
         return self.__flower_ability
-
     @flower_ability.setter
     def flower_ability(self, value):
         self.__flower_ability = value
 
     @property
-    def power(self):
-        return self.__power
-
-    @property
     def jump_power(self):
         return self.__jump_power
-
     @jump_power.setter
     def jump_power(self, value):
         self.__jump_power = value
 
+    @property
+    def power(self):
+        return self.__power
     @power.setter
     def power(self, value):
         self.__power = value
@@ -66,7 +61,6 @@ class Hero(Character):
     @property
     def super_hero(self):
         return self.__super_hero
-
     @super_hero.setter
     def super_hero(self, value=False):
         self.__super_hero = value
@@ -74,7 +68,6 @@ class Hero(Character):
     @property
     def side(self):
         return self.__side
-
     @side.setter
     def side(self, value):
         self.__side = value
@@ -82,24 +75,20 @@ class Hero(Character):
     @property
     def time_flower_activity(self):
         return self.__time_flower_activity
-
-    @property
-    def time_mushroom_activity(self):
-        return self.__time_mushroom_activity
-
-    @time_mushroom_activity.setter
-    def time_mushroom_activity(self, value=0):
-        self.__time_mushroom_activity += value
-
     @time_flower_activity.setter
     def time_flower_activity(self, value=0):
         self.__time_flower_activity += value
 
+    @property
+    def time_mushroom_activity(self):
+        return self.__time_mushroom_activity
+    @time_mushroom_activity.setter
+    def time_mushroom_activity(self, value=0):
+        self.__time_mushroom_activity += value
 
     @property
     def key_fire(self):
             return self.__key_fire
-
     @key_fire.setter
     def key_fire(self, value):
         self.__key_fire = value
@@ -107,19 +96,6 @@ class Hero(Character):
     @property
     def key_up(self):
         return self.__key_up
-
-    @property
-    def key_left(self):
-        return self.__key_left
-
-    @property
-    def key_right(self):
-        return self.__key_right
-
-    @property
-    def key_up(self):
-        return self.__key_up
-
     @key_up.setter
     def key_up(self, value):
         self.__key_up = value
@@ -127,15 +103,13 @@ class Hero(Character):
     @property
     def key_left(self):
         return self.__key_left
-
-    @key_left.setter
-    def key_left(self, value):
-        self.__key_left = value
+    @property
+    def key_left(self):
+        return self.__key_left
 
     @property
     def key_right(self):
         return self.__key_right
-
     @key_right.setter
     def key_right(self, value):
         self.__key_right = value
@@ -155,20 +129,14 @@ class Hero(Character):
     def set_fire_ability(self):
         self.fire_ability = False
 
-    # def become_simple_mario(self):
-    #     self.power = 1
-    #     self.time_flower_activity = 0
-
     def update_bonus(self):
-        # if isinstance(self, Hero):
-            if self.flower_ability:
-                if self.time_flower_activity == 0:
-                    self.get_simple_jump()
-                else:
-                    self.time_flower_activity = -1
-
-            if self.fire_ability:
-                if self.time_mushroom_activity == 0:
-                    self.set_fire_ability()
-                else:
-                    self.time_mushroom_activity = -1
+        if self.flower_ability:
+            if self.time_flower_activity == 0:
+                self.get_simple_jump()
+            else:
+                self.time_flower_activity = -1
+        if self.fire_ability:
+            if self.time_mushroom_activity == 0:
+                self.set_fire_ability()
+            else:
+                self.time_mushroom_activity = -1

@@ -1,5 +1,4 @@
 import pygame
-
 from model.entity.dead.Platform import Platform
 
 

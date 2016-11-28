@@ -1,6 +1,6 @@
-import pygame,sys
+import pygame
+import sys
 from pygame import *
-
 from model.entity.alive.Fire import Fire
 from model.entity.alive.enemies.Bowser import Bowser
 from model.entity.alive.enemies.Monster import Monster
@@ -12,7 +12,6 @@ from model.entity.dead.Mushroom import Mushroom
 from model.entity.dead.Bonus import Bonus
 from model.entity.dead.Castle import Castle
 from model.entity.dead.SimpleBlock import SimpleBlock
-
 
 
 class LogicHero:
@@ -47,6 +46,7 @@ class LogicHero:
     @staticmethod
     def update_hero(heroes, blocks, entities, monsters, RESULT):
         if not heroes.not_exist():
+
             for block in blocks:
                 if isinstance(block, BonusBlock):
                     if block.change_ability:
@@ -81,12 +81,15 @@ class LogicHero:
 
                 hero.rect.x += hero.xvel
                 status_hero = LogicHero.contact_with_blocks(heroes, hero, hero.xvel, 0, blocks, entities, monsters)
+
                 if status_hero == True:
                     RESULT[0]= True
+
 
     @staticmethod
     def contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters):
         if not heroes.not_exist():
+
             for block in blocks:
                 hero.update_bonus()
                 if isinstance(block, Castle):
@@ -163,7 +166,6 @@ class LogicHero:
 
     @staticmethod
     def contact_bonus_blocks(blocks, block, entities):
-
         if isinstance(block, BonusBlock):
             block.make_simple()
             bonus = None

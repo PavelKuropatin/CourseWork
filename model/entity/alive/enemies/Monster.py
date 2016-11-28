@@ -17,24 +17,8 @@ class Monster(Character):
         self.__time_changing = len(self.__images_existing) * koef
 
     @property
-    def time_changing(self):
-        return self.__time_changing
-
-    @time_changing.setter
-    def time_changing(self, value):
-        self.__time_changing += value
-
-    @property
-    def changing(self):
-        return self.__changing
-
-    @property
     def koef(self):
         return self.__koef
-
-    @property
-    def max_way(self):
-        return self.__max_way
 
     @property
     def images_existing(self):
@@ -44,19 +28,29 @@ class Monster(Character):
     def image_killed(self):
         return self.__image_killed
 
-    @changing.setter
-    def changing(self, value=False):
-        self.__changing = value\
+    @property
+    def time_changing(self):
+        return self.__time_changing
+    @time_changing.setter
+    def time_changing(self, value):
+        self.__time_changing += value
 
+    @property
+    def max_way(self):
+        return self.__max_way
     @max_way.setter
     def max_way(self, value=False):
         self.__max_way = value
 
+    @property
+    def changing(self):
+        return self.__changing
+    @changing.setter
+    def changing(self, value=False):
+        self.__changing = value
+
     def killed(self,monsters, entities, blocks):
         self.rect.y += self.rect.height // 2
-        self.xvel = 0
-        self.changing = False
-
         monsters.remove(self)
         blocks.remove(self)
         time.wait(1000)

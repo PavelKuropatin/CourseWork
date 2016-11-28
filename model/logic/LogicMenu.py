@@ -1,7 +1,7 @@
 import pygame,sys
 from pygame import *
-
 from view.ViewBackgound import ViewBackground
+from model.entity.alive.heroes.Heroes import Heroes
 
 
 class LogicMenu:
@@ -9,16 +9,17 @@ class LogicMenu:
     font=''
     height_game=0
     height_menu=0
-    background_color=0
-    color_active_text=0
-    color_simple_text=0
+    background_color=(0,0,0)
+    color_active_text=(0,0,0)
+    color_simple_text=(0,0,0)
 
     @staticmethod
     def show_lives(background, heroes):
-        array=heroes.get_lives()
-        font_menu = pygame.font.Font(LogicMenu.font, LogicMenu.height_game)
-        for i in range(len(array)):
-            ViewBackground.blit_font(background,font_menu,array[i], 1, (0,0,0), background.get_width()//2+200*(i-1), 10)
+        if isinstance(heroes, Heroes):
+            array=heroes.get_lives()
+            font_menu = pygame.font.Font(LogicMenu.font, LogicMenu.height_game)
+            for i in range(len(array)):
+                ViewBackground.blit_font(background,font_menu,array[i], 1, (0,0,0), background.get_width()//2+200*(i-1), 10)
 
     @staticmethod
     def get_points_menu():
@@ -36,7 +37,6 @@ class LogicMenu:
             points = LogicMenu.get_points_during_menu()
         else:
             points = LogicMenu.get_points_menu()
-
         ViewBackground.fill_view(background, LogicMenu.background_color)
         while True:
             LogicMenu.render(points, background, font_menu, point)
@@ -97,7 +97,6 @@ class LogicMenu:
                             return
                         LogicMenu.menu(background, window, during_game=False)
                         return
-
                     if e.key == K_UP:
                         if point > 0:
                             point -= 1

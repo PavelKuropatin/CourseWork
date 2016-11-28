@@ -1,3 +1,5 @@
+from model.entity.alive.heroes.Hero import Hero
+
 
 class Heroes:
 
@@ -29,7 +31,8 @@ class Heroes:
 
     def append(self, *other):
         for item in other:
-            self.__lst.append(item)
+            if isinstance(item, Hero):
+                self.__lst.append(item)
 
     def killed(self, hero, entities):
         hero.lifes = -1

@@ -1,10 +1,10 @@
 import pygame
+from pygame import *
 import threading
-import sys,time
+import sys
 from model.entity.Camera import Camera
 from model.entity.LevelGenerator import LevelGenerator
 from model.entity.alive.heroes.Hero import Hero
-from model.logic.LogicCamera import LogicCamera
 from model.logic.LogicHero import LogicHero
 from model.logic.LogicMenu import LogicMenu
 from model.logic.LogicMonster import LogicMonster
@@ -24,7 +24,8 @@ class LogicGame:
         LogicMenu.background_color=background_color
         LogicMenu.color_active_text=(250, 30, 250)
         LogicMenu.color_simple_text=(250, 250, 30)
-        LevelGenerator.set_levels(['levels/level1.txt','levels/level2.txt'])
+        generator = LevelGenerator(platform_width=32, platform_height=32, levels=['levels/level1.txt','levels/level2.txt'],
+                                   level='',number_level=0)
         while True:
             choice = LogicMenu.menu(background, window,during_game=False)
             if choice == 1 or choice == 2:
@@ -33,19 +34,20 @@ class LogicGame:
                 heroes = Heroes()
                 hero1 = Hero(x=170, y=170, width=22, height=28, keys=settings[:4], type="hero1",
                              name_image='mario/hero1.png',side=False, power=1, lifes=3, super_hero=False,
-                             time_flower_activity=0, time_mushroom_activity=0, left=False, right=False, up=False, on_ground=False, xvel=0, yvel=0,
-                             move_speed=4, jump_power=16, gravity=1, fire_ability=False, flower_ability=False)
+                             time_flower_activity=0, time_mushroom_activity=0, left=False, right=False, up=False,
+                             on_ground=False, xvel=0, yvel=0, move_speed=4, jump_power=16, gravity=1,
+                             fire_ability=False, flower_ability=False)
                 heroes.append(hero1)
                 if choice == 2:
                     hero2 = Hero(x=270, y=170, width=22, height=28, keys=settings[4:], type="hero2",
                                  name_image='mario/hero2.png',side=False, power=1, lifes=3, super_hero=False,
-                                 time_flower_activity=0, time_mushroom_activity=0, left=False, right=False, up=False, on_ground=False, xvel=0,
-                                 yvel=0, move_speed=4, jump_power=16, gravity=1, fire_ability=False, flower_ability=False)
+                                 time_flower_activity=0, time_mushroom_activity=0, left=False, right=False, up=False,
+                                 on_ground=False, xvel=0, yvel=0, move_speed=4, jump_power=16, gravity=1,
+                                 fire_ability=False, flower_ability=False)
                     heroes.append(hero2)
 
-                level=0
                 '''Start GAME'''
-                LogicGame.start_game(settings, level, background, window, timer, heroes, during_game=True)
+                LogicGame.start_game(settings, generator, background, window, timer, heroes, during_game=True)
 
             if choice == 3:
 
@@ -60,7 +62,7 @@ class LogicGame:
                 sys.exit()
 
     @staticmethod
-    def start_game(settings, level, background, window, timer, heroes, during_game=True):
+    def start_game(settings, generator, background, window, timer, heroes, during_game=True):
 
         entities = pygame.sprite.Group()
         for h in heroes.lst:
@@ -71,11 +73,10 @@ class LogicGame:
         RESULT_LEVEL=[False]
 
         '''Window Set'''
-        LevelGenerator.generate_level(level, entities, platforms, monsters, nature)
-        level_width = len(LevelGenerator.level[len(LevelGenerator.level) - 1]) * LevelGenerator.platform_width()
-        level_height = len(LevelGenerator.level) * LevelGenerator.platform_height()
-        camera = Camera(level_width, level_height)
-
+        generator.generate_level(entities, platforms, monsters, nature)
+        level_width = len(generator.level[len(generator.level) - 1]) * generator.platform_width
+        level_height = len(generator.level) * generator.platform_height
+        camera = Camera(level_width, level_height, background.get_width(), background.get_height())
 
         while True:
 
@@ -93,6 +94,7 @@ class LogicGame:
                 if choice == 3:
                     ''' Finish Existing Game'''
                     if during_game:
+                        del generator
                         LogicGame.clear_data(heroes, entities, monsters, nature)
                         break
 
@@ -114,7 +116,8 @@ class LogicGame:
             if RESULT_LEVEL[0]:
                 heroes.set_default_settings()
                 LogicGame.clear_data(heroes,entities,monsters,nature, during_game=True)
-                LogicGame.start_game(settings, level+1, background, window, timer, heroes, during_game=True)
+                generator.number_level += 1
+                LogicGame.start_game(settings, generator, background, window, timer, heroes, during_game=True)
                 RESULT_LEVEL[0]=False
                 break
 
@@ -123,14 +126,14 @@ class LogicGame:
                 break
 
             '''Centering Camera'''
-            LogicCamera.in_center(camera, heroes.set_last_hero())
+            camera.in_center(heroes.set_last_hero().rect)
 
             '''Draw objects'''
             for n in nature:
-                value = camera.shift_object(n)
+                value = camera.shift_object(n.rect)
                 ViewBackground.blit_view(window, n.image, value.x, value.y)
             for entity in entities:
-                value = camera.shift_object(entity)
+                value = camera.shift_object(entity.rect)
                 ViewBackground.blit_view(window, entity.image, value.x, value.y)
 
             '''Update Background'''
