@@ -15,6 +15,7 @@ class Slub(Monster):
     def change_image(self):
         if self.time_changing:
             if self.time_changing % self.koef == 0:
+                pass
                 self.image = pygame.image.load(self.images_existing[self.time_changing//self.koef - 1])
             self.time_changing = -1
         else:
@@ -25,9 +26,12 @@ class Slub(Monster):
             self.image = Surface((self.rect.width, self.rect.height // 2))
             if not isinstance(self.image_killed, list):
                 self.image = pygame.image.load(self.image_killed)
+                pass
             else:
                 if self.side:
                     self.image = pygame.image.load(self.image_killed[0])
+                    pass
                 else:
                     self.image = pygame.image.load(self.image_killed[1])
+                    pass
             super().killed(monsters, entities, blocks)

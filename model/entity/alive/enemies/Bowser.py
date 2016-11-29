@@ -25,6 +25,7 @@ class Bowser(Monster):
         if self.time_changing:
             if self.time_changing % self.koef == 0:
                 self.image = pygame.image.load(self.images_existing[int(not self.side)][self.time_changing // self.koef - 1])
+                pass
             self.time_changing = -1
         else:
             self.time_changing = len(self.images_existing) * self.koef
@@ -34,6 +35,8 @@ class Bowser(Monster):
             self.image = Surface((self.rect.width, self.rect.height // 2))
             if self.side:
                 self.image = pygame.image.load(self.image_killed[0])
+                pass
             else:
                 self.image = pygame.image.load(self.image_killed[1])
+                pass
             super().killed(monsters, entities, blocks)

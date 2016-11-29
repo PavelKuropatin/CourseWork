@@ -17,7 +17,7 @@ class LogicMenu:
     def show_lives(background, heroes):
         if isinstance(heroes, Heroes):
             array=heroes.get_lives()
-            font_menu = pygame.font.Font(LogicMenu.font, LogicMenu.height_game)
+            font_menu = pygame.font.SysFont(LogicMenu.font, LogicMenu.height_game)
             for i in range(len(array)):
                 ViewBackground.blit_font(background,font_menu,array[i], 1, (0,0,0), background.get_width()//2+200*(i-1), 10)
 
@@ -31,7 +31,7 @@ class LogicMenu:
 
     @staticmethod
     def menu(background, window, during_game=False):
-        font_menu = pygame.font.Font(LogicMenu.font, LogicMenu.height_menu)
+        font_menu = pygame.font.SysFont(LogicMenu.font, LogicMenu.height_game)
         point = 1
         if during_game:
             points = LogicMenu.get_points_during_menu()
@@ -81,7 +81,7 @@ class LogicMenu:
 
     @staticmethod
     def settings(background, window, settings, during_game):
-        font_menu = pygame.font.Font(LogicMenu.font, LogicMenu.height_menu)
+        font_menu = pygame.font.SysFont(LogicMenu.font, LogicMenu.height_game)
         point = 1
         points = LogicMenu.get_settings_points_menu(settings)
         ViewBackground.fill_view(background, LogicMenu.background_color)

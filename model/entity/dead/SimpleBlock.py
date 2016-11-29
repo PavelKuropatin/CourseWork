@@ -26,6 +26,7 @@ class SimpleBlock(Platform):
         self.lifes = -hero_power
         if self.lifes == 1:
             self.image = pygame.image.load(self.__image_damage)
+            pass
         if self.lifes <= 0:
             entities.remove(block)
             blocks.remove(self)
