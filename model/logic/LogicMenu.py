@@ -1,25 +1,24 @@
 import pygame,sys
 from pygame import *
 from view.ViewBackgound import ViewBackground
-from model.entity.alive.heroes.Heroes import Heroes
 
 
 class LogicMenu:
 
-    font=''
-    height_game=0
-    height_menu=0
-    background_color=(0,0,0)
-    color_active_text=(0,0,0)
-    color_simple_text=(0,0,0)
+    font = ''
+    height_game = 0
+    height_menu = 0
+    background_color = (0, 0, 0)
+    color_active_text = (0, 0, 0)
+    color_simple_text = (0, 0, 0)
 
     @staticmethod
-    def show_lives(background, heroes):
-        if isinstance(heroes, Heroes):
-            array=heroes.get_lives()
-            font_menu = pygame.font.SysFont(LogicMenu.font, LogicMenu.height_game)
-            for i in range(len(array)):
-                ViewBackground.blit_font(background,font_menu,array[i], 1, (0,0,0), background.get_width()//2+200*(i-1), 10)
+    def show_interface(background, heroes_lives, level):
+        font_menu = pygame.font.Font(LogicMenu.font, LogicMenu.height_game)
+        ViewBackground.blit_font(background, font_menu, u'Level %d' % (level), 1, (0, 0, 0), 10, 10)
+        for i in range(len(heroes_lives)):
+            ViewBackground.blit_font(background, font_menu, heroes_lives[i], 1, (0, 0, 0),
+                                         background.get_width()//2+200*(i-1), 10)
 
     @staticmethod
     def get_points_menu():
@@ -31,7 +30,7 @@ class LogicMenu:
 
     @staticmethod
     def menu(background, window, during_game=False):
-        font_menu = pygame.font.SysFont(LogicMenu.font, LogicMenu.height_game)
+        font_menu = pygame.font.Font(LogicMenu.font, LogicMenu.height_menu)
         point = 1
         if during_game:
             points = LogicMenu.get_points_during_menu()
@@ -47,10 +46,10 @@ class LogicMenu:
                     if e.key == K_ESCAPE:
                         return
                     if e.key == K_UP:
-                        if point > 0:
+                        if point > 1:
                             point -= 1
                     if e.key == K_DOWN:
-                        if point < len(points):
+                        if point < 4:
                             point += 1
                     if e.key == 13:
                         if point in [1, 2, 3, 4]:
@@ -60,28 +59,95 @@ class LogicMenu:
 
     @staticmethod
     def get_settings_points_menu(settings):
-        return [[70, 380, u'Back', 1],
-                [250, 100, u'%s' % chr(settings[0]), 2],
-                [250, 170, u'%s' % chr(settings[1]), 3],
-                [250, 240, u'%s' % chr(settings[2]), 4],
-                [250, 310, u'%s' % chr(settings[3]), 5],
-                [550, 100, u'%s' % chr(settings[4]), 6],
-                [550, 170, u'%s' % chr(settings[5]), 7],
-                [550, 240, u'%s' % chr(settings[6]), 8],
-                [550, 310, u'%s' % chr(settings[7]), 9],
-                [70, 100, u'Up', 0],
-                [70, 170, u'Left', 0],
-                [70, 240, u'Right', 0],
-                [70, 310, u'Fire', 0],
+        values=[]
+        keys = {
+            'space': K_SPACE,
+            'tab': K_TAB,
+            'right ctrl': K_RCTRL,
+            'left ctrl': K_LCTRL,
+            'up': K_UP,
+            'down': K_DOWN,
+            'left': K_LEFT,
+            'right': K_RIGHT,
+            'delete': K_DELETE,
+            'backspace': K_BACKSPACE,
+            'f1': K_F1,
+            'f2': K_F2,
+            'f3': K_F3,
+            'f4': K_F4,
+            'f5': K_F5,
+            'f6': K_F6,
+            'f7': K_F7,
+            'f8': K_F8,
+            'f9': K_F9,
+            'f10': K_F10,
+            'f11': K_F11,
+            'f12': K_F12,
+            'f13': K_F13,
+            'f14': K_F14,
+            'caps lock': K_CAPSLOCK,
+            'right shift': K_RSHIFT,
+            'left shift': K_LSHIFT,
+            'left alt': K_LALT,
+            'right alt': K_RALT,
+            'menu': K_MENU,
+            'insert': K_INSERT,
+            'print screen': K_PRINT,
+            'end': K_END,
+            'page up': K_PAGEUP,
+            'page down': K_PAGEDOWN,
+            'pause': K_PAUSE,
+            '[0]': K_KP0,
+            '[1]': K_KP1,
+            '[2]': K_KP2,
+            '[3]': K_KP3,
+            '[4]': K_KP4,
+            '[5]': K_KP5,
+            '[6]': K_KP6,
+            '[7]': K_KP7,
+            '[8]': K_KP8,
+            '[9]': K_KP9,
+            'enter': K_KP_ENTER,
+            '[/]': K_KP_DIVIDE,
+            '[+]': K_KP_PLUS,
+            '[-]': K_KP_MINUS,
+            '[*]': K_KP_MULTIPLY,
+            '[.]': K_KP_PERIOD,
+            'numlock': K_NUMLOCK
+        }
+        items = keys.items()
+        for s in settings:
+            for k, v in items:
+                if v == s:
+                    values.append(k)
+                    break
+            else:
+                    values.append(chr(s))
+        return [[50, 380, u'Back', 1],
+                [250, 100, u'%s' % values[0], 2],
+                [250, 170, u'%s' % values[1], 3],
+                [250, 240, u'%s' % values[2], 4],
+                [250, 310, u'%s' % values[3], 5],
+                [550, 100, u'%s' % values[4], 6],
+                [550, 170, u'%s' % values[5], 7],
+                [550, 240, u'%s' % values[6], 8],
+                [550, 310, u'%s' % values[7], 9],
+                [50, 100, u'Up', 0],
+                [50, 170, u'Left', 0],
+                [50, 240, u'Right', 0],
+                [50, 310, u'Fire', 0],
                 [250, 30, u'1 Player', 0],
                 [550, 30, u'2 Player', 0],
-                [70, 100, u'Up', 0],
-                [70, 170, u'Left', 0],
-                [70, 240, u'Right', 0]]
+                [50, 100, u'Up', 0],
+                [50, 170, u'Left', 0],
+                [50, 240, u'Right', 0],
+                [50, 490, u'To change button press Enter', 0],
+                [50, 540, u'To install selected button', 0],
+                [50, 580, u'press Escape', 0]]
 
     @staticmethod
     def settings(background, window, settings, during_game):
-        font_menu = pygame.font.SysFont(LogicMenu.font, LogicMenu.height_game)
+        font_menu = pygame.font.Font(LogicMenu.font, LogicMenu.height_menu)
         point = 1
         points = LogicMenu.get_settings_points_menu(settings)
         ViewBackground.fill_view(background, LogicMenu.background_color)
@@ -98,18 +164,18 @@ class LogicMenu:
                         LogicMenu.menu(background, window, during_game=False)
                         return
                     if e.key == K_UP:
-                        if point > 0:
+                        if point > 1:
                             point -= 1
                     if e.key == K_DOWN:
-                        if point < len(points)-1:
+                        if point < 9:
                             point += 1
+                    if point in [2, 3, 4, 5] and e.key == K_RIGHT:
+                        point += 4
+                    if point in [6, 7, 8, 9] and e.key == K_LEFT:
+                        point -= 4
                     if e.key == 13:
                         if point in [2, 3, 4, 5, 6, 7, 8, 9]:
-                            string = LogicMenu.replace_button(points, point-1, settings)
-                            if string:
-                                settings[point - 1] = ord(string)
-                                points[point-1][2] = u'%s' % string
-                            ViewBackground.fill_view(background, LogicMenu.background_color)
+                            LogicMenu.replace_button(background, window, points, point, settings)
                         if point == 1:
                             if during_game:
                                 LogicMenu.menu(background, window, during_game=True)
@@ -137,93 +203,23 @@ class LogicMenu:
                 ViewBackground.blit_font(surface, font, text, 1, LogicMenu.color_simple_text, x, y)
 
     @staticmethod
-    def replace_button(points, i, settings):
-        string = ""
+    def replace_button(background, window, points, point, settings):
+        font_menu = pygame.font.Font(LogicMenu.font, LogicMenu.height_menu)
         while True:
+            LogicMenu.render(points, background, font_menu, point)
             for e in pygame.event.get():
                 if e.type == QUIT:
                     sys.exit()
                 if e.type == KEYDOWN:
-                    if e.key == K_BACKSPACE:
-                        string = string.replace(string[len(string)-1], "")
-                    elif e.key == K_ESCAPE:
-                        return string if LogicMenu.check_on_free(string, settings) and string \
-                                      else points[i][2]
+                    if e.key == K_ESCAPE:
+                        return
                     else:
-                        string += chr(e.key)
-
-    @staticmethod
-    def check_on_free(value, settings):
-        if len(value) == 1:
-            keys = {
-                ' ': ord(' '),
-                '!': ord('!'),
-                '"': ord('"'),
-                '#': ord('#'),
-                '$': ord('$'),
-                '&': ord('&'),
-                '(': ord('('),
-                ')': ord(')'),
-                '*': ord('*'),
-                '+': ord('+'),
-                ',': ord(','),
-                '-': ord('-'),
-                '.': ord('.'),
-                '/': ord('/'),
-                '0': ord('0'),
-                '1': ord('1'),
-                '2': ord('3'),
-                '3': ord('3'),
-                '4': ord('4'),
-                '5': ord('5'),
-                '6': ord('6'),
-                '7': ord('7'),
-                '8': ord('8'),
-                '9': ord('9'),
-                ':': ord(':'),
-                ';': ord(';'),
-                '<': ord('<'),
-                '>': ord('>'),
-                '=': ord('='),
-                '?': ord('?'),
-                '@': ord('@'),
-                '[': ord('['),
-                ']': ord(']'),
-                '^': ord('^'),
-                '_': ord('_'),
-                "'": ord("'"),
-                'a': ord('a'),
-                'b': ord('b'),
-                'c': ord('c'),
-                'd': ord('d'),
-                'e': ord('e'),
-                'f': ord('f'),
-                'g': ord('g'),
-                'h': ord('h'),
-                'i': ord('i'),
-                'j': ord('j'),
-                'k': ord('k'),
-                'l': ord('l'),
-                'm': ord('m'),
-                'n': ord('n'),
-                'o': ord('o'),
-                'p': ord('p'),
-                'q': ord('q'),
-                'r': ord('r'),
-                's': ord('s'),
-                't': ord('t'),
-                'u': ord('u'),
-                'v': ord('v'),
-                'w': ord('w'),
-                'x': ord('x'),
-                'y': ord('y'),
-                'z': ord('z')
-            }
-            if keys.get(value):
-                for e in settings:
-                    if e == ord(value):
-                        return False
-                return True
-            else:
-                return False
-        return False
+                        for s in settings:
+                            if s == e.key:
+                                break
+                        else:
+                            settings[point - 2] = e.key
+                            points[point - 1][2] = u'%s' % pygame.key.name(e.key)
+                        ViewBackground.fill_view(background, LogicMenu.background_color)
+            ViewBackground.blit_view(window, background, 0, 0)
+            pygame.display.flip()

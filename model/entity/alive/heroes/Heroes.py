@@ -47,11 +47,12 @@ class Heroes:
         array=[]
         for hero in self.lst:
             if hero.fire_ability and hero.flower_ability:
-                array.append('{0} - {1}  Jump - {2}  Fire - {3}'.format(hero.type, hero.lifes, hero.time_flower_activity // 10000, hero.time_mushroom_activity//10000))
+                array.append('{0} - {1}  Jump - {2}  Fire - {3}'.format(hero.type, hero.lifes, int(hero.time_flower_activity // 10000),
+                                                                        int(hero.time_mushroom_activity//10000)))
             elif hero.fire_ability and not hero.flower_ability:
-                array.append('{0} - {1}  Fire - {2}'.format(hero.type, hero.lifes, hero.time_mushroom_activity //10000))
+                array.append('{0} - {1}  Fire - {2}'.format(hero.type, hero.lifes, int(hero.time_mushroom_activity //10000)))
             elif hero.flower_ability and not hero.fire_ability:
-                array.append('{0} - {1}  Jump - {2}'.format(hero.type, hero.lifes, hero.time_flower_activity // 10000))
+                array.append('{0} - {1}  Jump - {2}'.format(hero.type, hero.lifes, int(hero.time_flower_activity // 10000)))
             else:
                 array.append('{0} - {1}'.format(hero.type, hero.lifes))
                                            # u'\u2764'* hero.lifes

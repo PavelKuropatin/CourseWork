@@ -1,11 +1,14 @@
-from pygame import sprite, Rect, Surface
+from pygame import Color
 from model.entity.alive.Character import Character
 import pygame
+from pyganim import PygAnimation
+
 
 
 class Hero(Character):
 
-    def __init__(self,  x=0, y=0, width=0, height=0, keys=[], type='', name_image='', side=False, power=0, lifes=0,
+    def __init__(self,  x=0, y=0, width=0, height=0, keys=[], type='', animation_koef=0, animation_right='', animation_left='',
+                 animation_jump='', animation_jump_right='',animation_jump_left='',side=False, power=0, lifes=0,
                  super_hero=False, time_flower_activity=0, time_mushroom_activity=0, left=False, right=False, up=False,
                  on_ground=False, xvel=0, yvel=0, move_speed=0, jump_power=0, gravity=0, fire_ability=False,
                  flower_ability=False):
@@ -24,8 +27,40 @@ class Hero(Character):
         self.__key_left = keys[1]
         self.__key_right = keys[2]
         self.__key_fire = keys[3]
-        self.image = pygame.image.load(name_image)
 
+        self.image.set_colorkey(Color("#888888"))
+
+        animations = []
+        for anim in animation_right:
+            animations.append((anim, animation_koef))
+        self.do_right = PygAnimation(animations)
+        self.do_right.play()
+
+        animations = []
+        for anim in animation_left:
+            animations.append((anim, animation_koef))
+        self.do_left = PygAnimation(animations)
+        self.do_left.play()
+
+        self.do_stay_right = PygAnimation([(animation_right[0], animation_koef)])
+        self.do_stay_right.play()
+        self.do_stay_right.blit(self.image, (0, 0))
+
+        self.do_stay_left = PygAnimation([(animation_left[0], animation_koef)])
+        self.do_stay_left.play()
+        self.do_stay_left.blit(self.image, (0, 0))
+
+        self.do_jump_left = PygAnimation([(animation_jump_left, animation_koef)])
+        self.do_jump_left.play()
+
+        self.do_jump_right = PygAnimation([(animation_jump_right, animation_koef)])
+        self.do_jump_right.play()
+        self.do_jump = PygAnimation([(animation_jump, animation_koef)])
+        self.do_jump.play()
+
+
+    def image_load(self, image):
+        self.image = pygame.image.load(image)
     @property
     def type(self):
         return self.__type
@@ -103,9 +138,9 @@ class Hero(Character):
     @property
     def key_left(self):
         return self.__key_left
-    @property
-    def key_left(self):
-        return self.__key_left
+    @key_left.setter
+    def key_left(self, value):
+        self.__key_left = value
 
     @property
     def key_right(self):
@@ -129,14 +164,52 @@ class Hero(Character):
     def set_fire_ability(self):
         self.fire_ability = False
 
+    def update(self):
+        if self.up:
+            if self.on_ground:
+                self.yvel = -self.jump_power
+            self.image.fill(Color('#888888'))
+            self.do_jump.blit(self.image, (0, 0))
+
+        if self.left:
+            self.xvel = -self.move_speed
+            self.image.fill(Color('#888888'))
+            if self.up:
+                self.do_jump_left.blit(self.image, (0, 0))
+            else:
+                self.do_left.blit(self.image, (0, 0))
+
+        if self.right:
+            self.xvel = self.move_speed
+            self.image.fill(Color('#888888'))
+            if self.up:
+                self.do_jump_right.blit(self.image, (0, 0))
+            else:
+                self.do_right.blit(self.image, (0, 0))
+
+        if not (self.left or self.right):
+            self.xvel = 0
+            if not self.up:
+                self.image.fill(Color('#888888'))
+                if self.side:
+                    self.do_stay_left.blit(self.image, (0, 0))
+                else:
+                    self.do_stay_right.blit(self.image, (0, 0))
+
+
+        if not self.on_ground:
+            self.yvel += self.gravity
+
+        self.on_ground = False
+
     def update_bonus(self):
         if self.flower_ability:
             if self.time_flower_activity == 0:
                 self.get_simple_jump()
             else:
-                self.time_flower_activity = -1
+                self.time_flower_activity = -0.25
         if self.fire_ability:
             if self.time_mushroom_activity == 0:
                 self.set_fire_ability()
             else:
-                self.time_mushroom_activity = -1
+                self.time_mushroom_activity = -0.25

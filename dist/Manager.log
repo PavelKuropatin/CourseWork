@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "Manager.py", line 20, in <module>
-  File "Manager.py", line 17, in main
-  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicGame.py", line 37, in start_game_window
-    fire_ability=False, flower_ability=False)
-  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\alive\heroes\Hero.py", line 28, in __init__
-    self.image = pygame.image.load(name_image)
-pygame.error: Couldn't open r1.png
