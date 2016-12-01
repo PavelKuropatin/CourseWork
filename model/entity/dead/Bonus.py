@@ -44,23 +44,23 @@ class Bonus(Platform):
         return self.__amount_images_appearing
     @amount_images_appearing.setter
     def amount_images_appearing(self, value=0):
-        self.__amount_images_appearing += value
+        self.__amount_images_appearing = value
 
     @property
     def amount_images_existing(self):
         return self.__amount_images_existing
     @amount_images_existing.setter
     def amount_images_existing(self, value=0):
-        self.__amount_images_existing += value
+        self.__amount_images_existing = value
 
     def appear_bonus(self):
         self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
-        self.amount_images_appearing = -1
+        self.amount_images_appearing -=1
 
     def exist_bonus(self):
         self.image = pygame.image.load(self.images_existing[self.amount_images_existing // self.koef - 1])
         if self.amount_images_existing != 0:
-            self.amount_images_existing = -1
+            self.amount_images_existing -=1
         else:
             self.amount_images_existing = len(self.images_existing) * self.koef
 

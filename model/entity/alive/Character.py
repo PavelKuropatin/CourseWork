@@ -50,7 +50,7 @@ class Character(sprite.Sprite):
         return self.__lifes
     @lifes.setter
     def lifes(self, value):
-        self.__lifes += value
+        self.__lifes = value
 
     @property
     def left(self):

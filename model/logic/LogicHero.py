@@ -63,6 +63,7 @@ class LogicHero:
 
                 hero.rect.y += hero.yvel
                 if hero.rect.y >= 640:
+                    hero.lifes -= 1
                     heroes.killed(hero, entities)
                     hero.move_to_start()
                     break
@@ -84,24 +85,23 @@ class LogicHero:
 
             for block in blocks:
                 hero.update_bonus()
-                # if isinstance(block, Castle):
-                #     if block.rect.left - hero.rect.right < block.width:
-                #         hero.jump_power=0
                 if sprite.collide_rect(hero, block):
                     if xvel > 0:
                         hero.rect.right = block.rect.left
-                        if isinstance(block, Monster) and block.changing:
-                                heroes.killed(hero, entities)
-                                return False
+                        if isinstance(block, Monster) and block.alive:
+                            hero.lifes -= 1
+                            heroes.killed(hero, entities)
+                            return False
                         if isinstance(block, Bonus):
                             LogicHero.contact_bonus(hero, block, blocks, entities)
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
                             break
                     if xvel < 0:
                         hero.rect.left = block.rect.right
-                        if isinstance(block, Monster) and block.changing:
-                                heroes.killed(hero, entities)
-                                return False
+                        if isinstance(block, Monster) and block.alive:
+                            hero.lifes -= 1
+                            heroes.killed(hero, entities)
+                            return False
                         if isinstance(block, Bonus):
                             LogicHero.contact_bonus(hero, block, blocks, entities)
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
@@ -110,13 +110,13 @@ class LogicHero:
                         hero.rect.bottom = block.rect.top
                         hero.on_ground = True
                         hero.yvel = 0
-                        # if (isinstance(block, Bowser) or isinstance(block, BlueFlower)) and block.changing:
-                        if (isinstance(block, Bowser) ) and block.changing:
+                        if (isinstance(block, Bowser) or isinstance(block, BlueFlower)) and block.alive:
+                            hero.lifes -= 1
                             heroes.killed(hero, entities)
                             return False
-                        if isinstance(block, Slub) and block.changing:
-                            block.changing = False
-                            block.lifes = -hero.power
+                        if isinstance(block, Slub) and block.alive:
+                            block.alive = False
+                            block.lifes -=hero.power
                             block.killed(monsters, entities, blocks)
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
                             break
@@ -127,11 +127,13 @@ class LogicHero:
                     if yvel < 0:
                         hero.rect.top = block.rect.bottom
                         hero.yvel = 0
-                        if isinstance(block, Monster) and block.changing:
+                        if isinstance(block, Monster) and block.alive:
+                            hero.lifes -= 1
                             heroes.killed(hero, entities)
                             return False
                         if isinstance(block, SimpleBlock):
-                            block.decrease_block_lives(hero.power, block, blocks, entities)
+                            block.lifes -=hero.power
+                            block.killed(blocks, entities)
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
                             break
                         if isinstance(block, BonusBlock) and block.activity:
@@ -215,10 +217,10 @@ class LogicHero:
             if hero.side:
                 fireball = Fire(x=hero.rect.x-10, y=hero.rect.y+(hero.height//2), width=7, height=6,
                                 image='data/blocks/fireball.png', side=hero.side, power=1, xvel=0, yvel=0, gravity=1,
-                                move_speed=5, left=True, right=False, up=False, on_ground=False, max_way=96, changing=True)
+                                move_speed=5, left=True, right=False, up=False, on_ground=False, max_way=96, alive=True)
             else:
                 fireball = Fire(x=hero.rect.x+hero.width, y=hero.rect.y + (hero.height // 2), width=7, height=6,
                                 image='data/blocks/fireball.png', side=hero.side, power=1, xvel=0, yvel=0, gravity=1,
-                                move_speed=5, left=True, right=False, up=False, on_ground=False, max_way=96, changing=True)
+                                move_speed=5, left=True, right=False, up=False, on_ground=False, max_way=96, alive=True)
             entities.add(fireball)
             monsters.add(fireball)

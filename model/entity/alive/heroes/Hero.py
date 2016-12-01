@@ -9,7 +9,7 @@ class Hero(Character):
 
     def __init__(self,  x=0, y=0, width=0, height=0, keys=[], type='', animation_koef=0, animation_right='', animation_left='',
                  animation_jump='', animation_jump_right='',animation_jump_left='',side=False, power=0, lifes=0,
-                 super_hero=False, time_flower_activity=0, time_mushroom_activity=0, left=False, right=False, up=False,
+                 time_flower_activity=0, time_mushroom_activity=0, left=False, right=False, up=False,
                  on_ground=False, xvel=0, yvel=0, move_speed=0, jump_power=0, gravity=0, fire_ability=False,
                  flower_ability=False):
 
@@ -17,7 +17,6 @@ class Hero(Character):
         self.__type = type
         self.__side = side
         self.__power = power
-        self.__super_hero = super_hero
         self.__time_flower_activity = time_flower_activity
         self.__time_mushroom_activity = time_mushroom_activity
         self.__fire_ability = fire_ability
@@ -94,13 +93,6 @@ class Hero(Character):
         self.__power = value
 
     @property
-    def super_hero(self):
-        return self.__super_hero
-    @super_hero.setter
-    def super_hero(self, value=False):
-        self.__super_hero = value
-
-    @property
     def side(self):
         return self.__side
     @side.setter
@@ -112,14 +104,14 @@ class Hero(Character):
         return self.__time_flower_activity
     @time_flower_activity.setter
     def time_flower_activity(self, value=0):
-        self.__time_flower_activity += value
+        self.__time_flower_activity = value
 
     @property
     def time_mushroom_activity(self):
         return self.__time_mushroom_activity
     @time_mushroom_activity.setter
     def time_mushroom_activity(self, value=0):
-        self.__time_mushroom_activity += value
+        self.__time_mushroom_activity = value
 
     @property
     def key_fire(self):
@@ -207,9 +199,9 @@ class Hero(Character):
             if self.time_flower_activity == 0:
                 self.get_simple_jump()
             else:
-                self.time_flower_activity = -0.25
+                self.time_flower_activity -= 0.25
         if self.fire_ability:
             if self.time_mushroom_activity == 0:
                 self.set_fire_ability()
             else:
-                self.time_mushroom_activity = -0.25
+                self.time_mushroom_activity -=0.25

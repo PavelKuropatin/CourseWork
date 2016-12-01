@@ -110,7 +110,7 @@ class LevelGenerator:
                                                  'data/enemies/simple_enemy/slub2.png'],
                                 image_killed='data/enemies/simple_enemy/slub3.png', koef=49, lifes=1, max_way=96, xvel=0,
                                 yvel=0, gravity=1, move_speed=1, left=True, right=False, up=False, on_ground=False,
-                                changing=True)
+                                alive=True)
                     monsters.add(item)
                     entities.add(item)
                     platforms.append(item)
@@ -118,7 +118,7 @@ class LevelGenerator:
                     item = BlueFlower(x=x+self.platform_width//2, y=y, width=32, height=32,
                                   images_existing=['data/enemies/blue_flower/blueflower1.png',
                                                    'data/enemies/blue_flower/blueflower2.png'],
-                                  koef=15, koef_exist=2,lifes=1, max_way=96, on_ground=True, changing=True)
+                                  koef=15, koef_exist=2,lifes=1, max_way=96, on_ground=True, alive=True, moving=True)
                     monsters.add(item)
                     entities.add(item)
                     platforms.append(item)
@@ -131,7 +131,7 @@ class LevelGenerator:
                                   image_killed=['data/enemies/bowser/bowser1_left_die.png',
                                                 'data/enemies/bowser/bowser1_right_die.png'], koef=9, side=True, lifes=5,
                                   max_way=96, xvel=0, yvel=0, gravity=1, move_speed=1, left=True, right=False, up=False,
-                                  on_ground=False, changing=True)
+                                  on_ground=False, alive=True)
                     monsters.add(item)
                     entities.add(item)
                     platforms.append(item)

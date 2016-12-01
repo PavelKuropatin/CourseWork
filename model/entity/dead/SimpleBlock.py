@@ -16,18 +16,16 @@ class SimpleBlock(Platform):
         return self.__lifes
     @lifes.setter
     def lifes(self, value):
-        self.__lifes += value
+        self.__lifes = value
 
     @property
     def image_damage(self):
         return self.__image_damage
 
-    def decrease_block_lives(self, hero_power, block, blocks, entities):
-        self.lifes = -hero_power
+    def killed(self, blocks, entities):
         if self.lifes == 1:
             self.image = pygame.image.load(self.__image_damage)
-            pass
-        if self.lifes <= 0:
-            entities.remove(block)
+        if self.lifes == 0:
+            entities.remove(self)
             blocks.remove(self)
             del self

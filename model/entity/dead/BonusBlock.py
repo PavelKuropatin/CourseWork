@@ -45,10 +45,10 @@ class BonusBlock(Platform):
         return self.__koef
     @koef.setter
     def koef(self, value=0):
-        self.__koef += value
+        self.__koef = value
 
     def set_koef(self, value=20):
-        self.__koef += value
+        self.__koef = value
 
     def make_simple(self):
         self.image = pygame.image.load(self.image_simple)
@@ -60,4 +60,4 @@ class BonusBlock(Platform):
             self.images_existing.reverse()
             self.image = pygame.image.load(self.images_existing[0])
         else:
-            self.koef = -1
+            self.koef -=1

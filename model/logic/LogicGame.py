@@ -31,13 +31,13 @@ class LogicGame:
 
                 ''' Creating Heroes'''
                 heroes = Heroes()
-                hero1 = Hero(x=5170, y=500, width=22, height=31, keys=settings[:4], type="hero1", animation_koef=3,
+                hero1 = Hero(x=170, y=500, width=22, height=31, keys=settings[:4], type="hero1", animation_koef=3,
                              animation_right=['data/mario/r1.png', 'data/mario/r2.png', 'data/mario/r3.png',
                                               'data/mario/r4.png', 'data/mario/r5.png'],
                              animation_left=['data/mario/l1.png', 'data/mario/l2.png', 'data/mario/l3.png',
                                              'data/mario/l4.png', 'data/mario/l5.png'],
                              animation_jump_left='data/mario/jl.png', animation_jump_right='data/mario/jr.png',
-                             animation_jump='data/mario/j.png', side=False, power=1, lifes=3, super_hero=False,
+                             animation_jump='data/mario/j.png', side=False, power=1, lifes=3,
                              time_flower_activity=0, time_mushroom_activity=0, left=False, right=False, up=False,
                              on_ground=False, xvel=0, yvel=0, move_speed=4, jump_power=16, gravity=1,
                              fire_ability=False, flower_ability=False)
@@ -49,7 +49,7 @@ class LogicGame:
                                  animation_left=['data/mario/l1.png', 'data/mario/l2.png', 'data/mario/l3.png',
                                                  'data/mario/l4.png', 'data/mario/l5.png'],
                                  animation_jump_left='data/mario/jl.png', animation_jump_right='data/mario/jr.png',
-                                 animation_jump='data/mario/j.png', side=False, power=1, lifes=3, super_hero=False,
+                                 animation_jump='data/mario/j.png', side=False, power=1, lifes=3,
                                  time_flower_activity=0, time_mushroom_activity=0, left=False, right=False, up=False,
                                  on_ground=False, xvel=0, yvel=0, move_speed=4, jump_power=16, gravity=1,
                                  fire_ability=False, flower_ability=False)

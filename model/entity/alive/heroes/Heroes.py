@@ -35,7 +35,6 @@ class Heroes:
                 self.__lst.append(item)
 
     def killed(self, hero, entities):
-        hero.lifes = -1
         if hero.lifes == 0:
             entities.remove(hero)
             self.lst.remove(hero)

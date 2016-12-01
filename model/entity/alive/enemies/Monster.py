@@ -6,11 +6,11 @@ class Monster(Character):
 
     def __init__(self, x=0, y=0, width=0, height=0, images_existing=[], image_killed='', lifes=0, koef=0, max_way=0,
                  xvel=0, yvel=0, gravity=0, move_speed=0, left=False, right=False, up=False, on_ground=False,
-                 changing=False):
+                 alive=False):
 
         super().__init__(x, y, width, height, left, right, up, on_ground, xvel, yvel, move_speed, gravity, lifes)
         self.__max_way = max_way
-        self.__changing = changing
+        self.__alive = alive
         self.__koef = koef
         self.__image_killed = image_killed
         self.__images_existing = images_existing
@@ -34,7 +34,7 @@ class Monster(Character):
 
     @time_changing.setter
     def time_changing(self, value):
-        self.__time_changing += value
+        self.__time_changing = value
 
     @property
     def max_way(self):
@@ -45,12 +45,12 @@ class Monster(Character):
         self.__max_way = value
 
     @property
-    def changing(self):
-        return self.__changing
+    def alive(self):
+        return self.__alive
 
-    @changing.setter
-    def changing(self, value=False):
-        self.__changing = value
+    @alive.setter
+    def alive(self, value=False):
+        self.__alive = value
 
     def killed(self, monsters, entities, blocks):
         monsters.remove(self)
