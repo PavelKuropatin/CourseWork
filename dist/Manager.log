@@ -1,0 +1,2336 @@
+Traceback (most recent call last):
+  File "Manager.py", line 20, in <module>
+  File "Manager.py", line 17, in main
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicGame.py", line 29, in start_game_window
+    choice = LogicMenu.menu(background, window, during_game=False)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicMenu.py", line 33, in menu
+    font_menu = pygame.font.Font(LogicMenu.font, LogicMenu.height_menu)
+OSError: unable to read font file 'data/fonts/coders_crux.ttf'
+Exception in thread Thread-1695:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1693:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1697:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1691:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1699:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1701:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1703:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1705:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1707:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1709:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1711:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1713:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1715:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1717:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1719:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1721:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1723:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1725:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1727:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1729:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1731:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1733:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1735:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1737:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1739:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1741:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1743:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1745:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1747:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1749:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1751:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1753:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1755:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1757:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1759:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1761:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1763:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+Exception in thread Thread-1765:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+
+Exception in thread Thread-1767:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1769:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1771:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1773:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1775:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1777:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1779:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1781:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1783:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1785:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1787:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1789:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1791:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1793:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1795:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1797:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1799:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1801:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1803:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1805:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1807:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1809:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1811:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1813:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1815:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1817:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1819:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1821:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1823:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1825:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1827:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1829:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1831:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1833:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1835:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1837:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1839:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1841:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1843:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1845:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1847:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1849:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1851:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1853:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1855:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1857:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1859:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1861:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1863:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1865:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1867:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1869:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1871:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1873:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1875:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1877:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1879:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1881:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1883:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1885:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1887:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1889:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1891:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1893:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1895:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1897:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1899:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1901:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1903:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1905:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1907:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1909:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1911:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1913:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1915:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1917:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1919:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1921:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1923:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1925:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1927:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1929:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1931:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1933:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1935:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1937:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1939:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1941:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1943:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1945:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1947:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+Exception in thread Thread-1949:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+
+Exception in thread Thread-1951:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1953:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1955:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1957:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1959:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1961:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1963:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1965:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1967:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1969:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1971:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1973:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1975:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1977:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1979:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1981:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1983:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1985:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1987:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1989:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1991:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1993:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1995:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1997:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-1999:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2001:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2003:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2005:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2007:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2009:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2011:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2013:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2015:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2017:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2019:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2021:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2023:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2025:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2027:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2029:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2031:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2033:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2035:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2037:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2039:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2041:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2043:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2045:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2047:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2049:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2051:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2053:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2055:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2057:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2059:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2061:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2063:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2065:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2067:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2069:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2071:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2073:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2075:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+
+Exception in thread Thread-2077:
+Traceback (most recent call last):
+  File "C:\Python34\lib\threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "C:\Python34\lib\threading.py", line 868, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\logic\LogicHero.py", line 57, in update_heroes
+    block.appear_bonus()
+  File "C:\Users\Павел\PycharmProjects\CourseWork\model\entity\dead\Bonus.py", line 57, in appear_bonus
+    self.image = pygame.image.load(self.images_appearing[self.amount_images_appearing - 1])
+IndexError: list index out of range
+

@@ -1,25 +1,24 @@
 import pygame
 from pygame import *
 import threading
-import sys, os
-from model.entity.Camera import Camera
-from model.entity.LevelGenerator import LevelGenerator
+import sys
+from utility.Camera import Camera
+from utility.LevelGenerator import LevelGenerator
 from model.entity.alive.heroes.Hero import Hero
 from model.logic.LogicHero import LogicHero
 from model.logic.LogicMenu import LogicMenu
 from model.logic.LogicMonster import LogicMonster
 from view.ViewBackgound import ViewBackground
 from model.entity.alive.heroes.Heroes import Heroes
-from model.entity.alive.enemies.BlueFlower import BlueFlower
+from model.entity.alive.enemies.Monster import Monster
 import random
-
 
 class LogicGame:
 
     @staticmethod
     def start_game_window(background, background_color, window, timer, during_game=False):
-        settings = [ord('w'), ord('a'), ord('d'), ord('f'), ord('i'), ord('j'), ord('l'), ord(';')]
-        LogicMenu.font = "data/fonts/coders_crux.ttf"
+        settings = [K_w, K_a, K_d, K_f, K_UP, K_LEFT, K_RIGHT, K_RCTRL]
+        LogicMenu.font = "data/coders_crux.ttf"
         LogicMenu.height_menu = 60
         LogicMenu.height_game = 40
         LogicMenu.background_color = background_color
@@ -32,31 +31,31 @@ class LogicGame:
                 ''' Creating Heroes'''
                 heroes = Heroes()
                 hero1 = Hero(x=170, y=500, width=22, height=31, keys=settings[:4], type="hero1", animation_koef=3,
-                             animation_right=['data/mario/r1.png', 'data/mario/r2.png', 'data/mario/r3.png',
-                                              'data/mario/r4.png', 'data/mario/r5.png'],
-                             animation_left=['data/mario/l1.png', 'data/mario/l2.png', 'data/mario/l3.png',
-                                             'data/mario/l4.png', 'data/mario/l5.png'],
-                             animation_jump_left='data/mario/jl.png', animation_jump_right='data/mario/jr.png',
-                             animation_jump='data/mario/j.png', side=False, power=1, lifes=3,
+                             animation_right=['data/r1.png', 'data/r2.png', 'data/r3.png',
+                                              'data/r4.png', 'data/r5.png'],
+                             animation_left=['data/l1.png', 'data/l2.png', 'data/l3.png',
+                                             'data/l4.png', 'data/l5.png'],
+                             animation_jump_left='data/jl.png', animation_jump_right='data/jr.png',
+                             animation_jump='data/j.png', side=False, power=1, lifes=3,
                              time_flower_activity=0, time_mushroom_activity=0, left=False, right=False, up=False,
                              on_ground=False, xvel=0, yvel=0, move_speed=4, jump_power=16, gravity=1,
                              fire_ability=False, flower_ability=False)
                 heroes.append(hero1)
                 if choice == 2:
-                    hero2 = Hero(x=270, y=170, width=22, height=31, keys=settings[4:], type="hero2", animation_koef=3,
-                                 animation_right=['data/mario/r1.png', 'data/mario/r2.png', 'data/mario/r3.png',
-                                                  'data/mario/r4.png', 'data/mario/r5.png'],
-                                 animation_left=['data/mario/l1.png', 'data/mario/l2.png', 'data/mario/l3.png',
-                                                 'data/mario/l4.png', 'data/mario/l5.png'],
-                                 animation_jump_left='data/mario/jl.png', animation_jump_right='data/mario/jr.png',
-                                 animation_jump='data/mario/j.png', side=False, power=1, lifes=3,
+                    hero2 = Hero(x=270, y=500, width=22, height=31, keys=settings[4:], type="hero2", animation_koef=3,
+                                 animation_right=['data/r1.png', 'data/r2.png', 'data/r3.png',
+                                                  'data/r4.png', 'data/r5.png'],
+                                 animation_left=['data/l1.png', 'data/l2.png', 'data/l3.png',
+                                                 'data/l4.png', 'data/l5.png'],
+                                 animation_jump_left='data/jl.png', animation_jump_right='data/jr.png',
+                                 animation_jump='data/j.png', side=False, power=1, lifes=3,
                                  time_flower_activity=0, time_mushroom_activity=0, left=False, right=False, up=False,
                                  on_ground=False, xvel=0, yvel=0, move_speed=4, jump_power=16, gravity=1,
                                  fire_ability=False, flower_ability=False)
                     heroes.append(hero2)
                 generator = LevelGenerator(platform_width=32, platform_height=32,
-                                           levels=['data/levels/level1.txt', 'data/levels/level2.txt','data/levels/level3.txt'],
-                                           level='', number_level=0)
+                                           levels=['data/level1.txt', 'data/level2.txt','data/level3.txt'],
+                                           level='', number_level=2)
 
                 '''Start GAME'''
                 LogicGame.start_game(settings, generator, background, window, timer, heroes, during_game=True)
@@ -77,7 +76,7 @@ class LogicGame:
     def start_game(settings, generator, background, window, timer, heroes, during_game=True):
 
         if generator.number_level == generator.max_level:
-            LogicGame.finish_game(background, window, 'data/music/lmfao.mp3')
+            LogicGame.finish_game(background, window, 'data/lmfao.mp3')
             LogicGame.clear_data(heroes)
         else:
             entities = pygame.sprite.Group()
@@ -119,15 +118,13 @@ class LogicGame:
                         ''' Exit Game'''
                         sys.exit()
 
-                timer.tick(60)
-
                 '''Creating Threads'''
                 t1 = threading.Thread(target=LogicHero.update_heroes, args=(heroes, platforms, entities, monsters,
                                                                             result_level))
                 t1.start()
                 t2 = threading.Thread(target=LogicMonster.update_monster, args=(monsters, platforms, entities, heroes))
                 t2.start()
-
+                timer.tick(1000)
                 '''Set Background'''
                 ViewBackground.blit_view(window, background, 0, 0)
 
@@ -140,7 +137,7 @@ class LogicGame:
 
                 '''Check On Existing Heroes'''
                 if heroes.not_exist():
-                    break
+                    return
 
                 '''Centering Camera'''
                 camera.in_center(heroes.set_last_hero().rect)
@@ -150,11 +147,11 @@ class LogicGame:
                     value = camera.shift_object(n.rect)
                     ViewBackground.blit_view(window, n.image, value.x, value.y)
                 for m in monsters:
-                    if isinstance(m, BlueFlower):
+                    if isinstance(m, Monster):
                         value = camera.shift_object(m.rect)
                         ViewBackground.blit_view(window, m.image, value.x, value.y)
                 for e in entities:
-                    if not isinstance(e, BlueFlower):
+                    if not isinstance(e, Monster):
                         value = camera.shift_object(e.rect)
                         ViewBackground.blit_view(window, e.image, value.x, value.y)
 
@@ -164,8 +161,8 @@ class LogicGame:
 
                 '''Show lives'''
                 LogicMenu.show_interface(background, heroes.get_lives(), generator.number_level)
+                pygame.display.flip()
 
-                pygame.display.update()
 
     @staticmethod
     def clear_data(heroes, entities=None, monsters=None, nature=None, during_game=False):

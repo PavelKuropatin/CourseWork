@@ -65,19 +65,21 @@ class LogicHero:
                 if hero.rect.y >= 640:
                     hero.lifes -= 1
                     heroes.killed(hero, entities)
-                    hero.move_to_start()
+                    heroes.move_to_start()
                     break
 
                 status_hero = LogicHero.contact_with_blocks(heroes, hero, 0, hero.yvel, blocks, entities, monsters)
                 if status_hero == True:
-                    RESULT[0]= True
+                    RESULT[0] = True
+                    return
 
                 hero.rect.x += hero.xvel
                 status_hero = LogicHero.contact_with_blocks(heroes, hero, hero.xvel, 0, blocks, entities, monsters)
 
                 if status_hero == True:
-                    RESULT[0]= True
-
+                    RESULT[0] = True
+                    return
+        # print(time.time())
 
     @staticmethod
     def contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters):
@@ -92,20 +94,20 @@ class LogicHero:
                             hero.lifes -= 1
                             heroes.killed(hero, entities)
                             return False
-                        if isinstance(block, Bonus):
+                        elif isinstance(block, Bonus):
                             LogicHero.contact_bonus(hero, block, blocks, entities)
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
-                            break
-                    if xvel < 0:
+                            return
+                    elif xvel < 0:
                         hero.rect.left = block.rect.right
                         if isinstance(block, Monster) and block.alive:
                             hero.lifes -= 1
                             heroes.killed(hero, entities)
                             return False
-                        if isinstance(block, Bonus):
+                        elif isinstance(block, Bonus):
                             LogicHero.contact_bonus(hero, block, blocks, entities)
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
-                            break
+                            return
                     if yvel > 0:
                         hero.rect.bottom = block.rect.top
                         hero.on_ground = True
@@ -114,48 +116,49 @@ class LogicHero:
                             hero.lifes -= 1
                             heroes.killed(hero, entities)
                             return False
-                        if isinstance(block, Slub) and block.alive:
+                        elif isinstance(block, Slub) and block.alive:
                             block.alive = False
                             block.lifes -=hero.power
                             block.killed(monsters, entities, blocks)
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
-                            break
-                        if isinstance(block, Bonus):
+                            return
+                        elif isinstance(block, Bonus):
                             LogicHero.contact_bonus(hero, block, blocks, entities)
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
-                            break
-                    if yvel < 0:
+                            return
+                    elif yvel < 0:
                         hero.rect.top = block.rect.bottom
                         hero.yvel = 0
                         if isinstance(block, Monster) and block.alive:
                             hero.lifes -= 1
                             heroes.killed(hero, entities)
                             return False
-                        if isinstance(block, SimpleBlock):
+                        elif isinstance(block, SimpleBlock):
                             block.lifes -=hero.power
                             block.killed(blocks, entities)
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
-                            break
-                        if isinstance(block, BonusBlock) and block.activity:
+                            return
+                        elif isinstance(block, BonusBlock) and block.activity:
                             LogicHero.contact_bonus_blocks(blocks,block, entities)
                             LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
-                            break
+                            return
                         LogicHero.contact_bonus(hero, block, blocks, entities)
                         LogicHero.contact_with_blocks(heroes, hero, xvel, yvel, blocks, entities, monsters)
-                        break
+                        return
                     if isinstance(block, Exit):
                         time.wait(200)
                         return True
+            return False
 
     @staticmethod
     def contact_bonus(hero, block, blocks, entities):
       if isinstance(block, Bonus):
         if isinstance(block, Mushroom):
-            hero.time_mushroom_activity = block.time_activity
+            hero.time_mushroom_activity += block.time_activity
             hero.fire_ability = True
         if isinstance(block, Flower):
             hero.get_super_jump(block.flower_value)
-            hero.time_flower_activity = block.time_activity
+            hero.time_flower_activity += block.time_activity
             hero.flower_ability = True
         entities.remove(block)
         blocks.remove(block)
@@ -167,46 +170,26 @@ class LogicHero:
             bonus = None
             if block.type_bonus == 1:
                 bonus = Flower(x=block.x + 3, y=block.y - 59, width=26, height=27,
-                               start_image='data/blocks/flower_appear/flower_1.png',
-                               images_appearing=['data/blocks/flower_appear/flower_27.png',
-                                                 'data/blocks/flower_appear/flower_25.png',
-                                                 'data/blocks/flower_appear/flower_23.png',
-                                                 'data/blocks/flower_appear/flower_21.png',
-                                                 'data/blocks/flower_appear/flower_19.png',
-                                                 'data/blocks/flower_appear/flower_17.png',
-                                                 'data/blocks/flower_appear/flower_15.png',
-                                                 'data/blocks/flower_appear/flower_13.png',
-                                                 'data/blocks/flower_appear/flower_11.png',
-                                                 'data/blocks/flower_appear/flower_9.png',
-                                                 'data/blocks/flower_appear/flower_7.png',
-                                                 'data/blocks/flower_appear/flower_5.png',
-                                                 'data/blocks/flower_appear/flower_3.png',
-                                                 'data/blocks/flower_appear/flower_1.png'],
-                               images_existing=['data/blocks/flower_exist_day/flower_1.png',
-                                                'data/blocks/flower_exist_day/flower_2.png',
-                                                'data/blocks/flower_exist_day/flower_3.png',
-                                                'data/blocks/flower_exist_day/flower_4.png'],
+                               start_image='data/flower_1.png',
+                               images_appearing=['data/flower_27.png', 'data/flower_25.png', 'data/flower_23.png',
+                                                 'data/flower_21.png', 'data/flower_19.png', 'data/flower_17.png',
+                                                 'data/flower_15.png', 'data/flower_13.png', 'data/flower_11.png',
+                                                 'data/flower_9.png',  'data/flower_7.png', 'data/flower_5.png',
+                                                 'data/flower_3.png',  'data/flower_1.png'],
+                               images_existing=['data/flower_exist_day_1.png', 'data/flower_exist_day_2.png',
+                                                'data/flower_exist_day_3.png', 'data/flower_exist_day_4.png'],
                                koef=30, time_activity=200000, flower_value=1.2, change_ability=True)
             if block.type_bonus == 2:
                 bonus = Mushroom(x=block.x + 3, y=block.y - 59, width=26, height=27,
-                               start_image='data/blocks/mushroom_appear/mushroom_1.png',
-                               images_appearing=['data/blocks/mushroom_appear/mushroom_27.png',
-                                                 'data/blocks/mushroom_appear/mushroom_25.png',
-                                                 'data/blocks/mushroom_appear/mushroom_23.png',
-                                                 'data/blocks/mushroom_appear/mushroom_21.png',
-                                                 'data/blocks/mushroom_appear/mushroom_19.png',
-                                                 'data/blocks/mushroom_appear/mushroom_17.png',
-                                                 'data/blocks/mushroom_appear/mushroom_15.png',
-                                                 'data/blocks/mushroom_appear/mushroom_13.png',
-                                                 'data/blocks/mushroom_appear/mushroom_11.png',
-                                                 'data/blocks/mushroom_appear/mushroom_9.png',
-                                                 'data/blocks/mushroom_appear/mushroom_7.png',
-                                                 'data/blocks/mushroom_appear/mushroom_5.png',
-                                                 'data/blocks/mushroom_appear/mushroom_3.png',
-                                                 'data/blocks/mushroom_appear/mushroom_1.png'],
-                               images_existing=['data/blocks/mushroom_exist_day/mushroom_1.png',
-                                                'data/blocks/mushroom_exist_day/mushroom_2.png'],
-                                koef=30, time_activity=200000, change_ability=True)
+                                 start_image='data/mushroom_1.png',
+                                 images_appearing=['data/mushroom_27.png', 'data/mushroom_25.png', 'data/mushroom_23.png',
+                                                   'data/mushroom_21.png', 'data/mushroom_19.png', 'data/mushroom_17.png',
+                                                   'data/mushroom_15.png', 'data/mushroom_13.png', 'data/mushroom_11.png',
+                                                   'data/mushroom_9.png', 'data/mushroom_7.png', 'data/mushroom_5.png',
+                                                   'data/mushroom_3.png', 'data/mushroom_1.png'],
+                                 images_existing=['data/mushroom_exist_day_1.png',
+                                                  'data/mushroom_exist_day_2.png'],
+                                 koef=30, time_activity=200000, change_ability=True)
             if bonus:
                 blocks.append(bonus)
                 entities.add(bonus)
@@ -216,11 +199,11 @@ class LogicHero:
         if isinstance(hero, Hero):
             if hero.side:
                 fireball = Fire(x=hero.rect.x-10, y=hero.rect.y+(hero.height//2), width=7, height=6,
-                                image='data/blocks/fireball.png', side=hero.side, power=1, xvel=0, yvel=0, gravity=1,
+                                image='data/fireball.png', side=hero.side, power=1, xvel=0, yvel=0, gravity=1,
                                 move_speed=5, left=True, right=False, up=False, on_ground=False, max_way=96, alive=True)
             else:
                 fireball = Fire(x=hero.rect.x+hero.width, y=hero.rect.y + (hero.height // 2), width=7, height=6,
-                                image='data/blocks/fireball.png', side=hero.side, power=1, xvel=0, yvel=0, gravity=1,
+                                image='data/fireball.png', side=hero.side, power=1, xvel=0, yvel=0, gravity=1,
                                 move_speed=5, left=True, right=False, up=False, on_ground=False, max_way=96, alive=True)
             entities.add(fireball)
             monsters.add(fireball)

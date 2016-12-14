@@ -6,8 +6,8 @@ class ViewBackground:
         background.fill(color)
 
     @staticmethod
-    def blit_view(window,background, x, y):
-        window.blit(background, (x, y))
+    def blit_view(window, image, x, y):
+        window.blit(image, (x, y))
 
     @staticmethod
     def blit_font(background,font,text,value,color,x,y):

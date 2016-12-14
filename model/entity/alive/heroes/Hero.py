@@ -26,40 +26,31 @@ class Hero(Character):
         self.__key_left = keys[1]
         self.__key_right = keys[2]
         self.__key_fire = keys[3]
-
         self.image.set_colorkey(Color("#888888"))
-
+        # self.image = pygame.image.load(s)
         animations = []
         for anim in animation_right:
             animations.append((anim, animation_koef))
         self.do_right = PygAnimation(animations)
         self.do_right.play()
-
         animations = []
         for anim in animation_left:
             animations.append((anim, animation_koef))
         self.do_left = PygAnimation(animations)
         self.do_left.play()
-
         self.do_stay_right = PygAnimation([(animation_right[0], animation_koef)])
         self.do_stay_right.play()
         self.do_stay_right.blit(self.image, (0, 0))
-
         self.do_stay_left = PygAnimation([(animation_left[0], animation_koef)])
         self.do_stay_left.play()
         self.do_stay_left.blit(self.image, (0, 0))
-
         self.do_jump_left = PygAnimation([(animation_jump_left, animation_koef)])
         self.do_jump_left.play()
-
         self.do_jump_right = PygAnimation([(animation_jump_right, animation_koef)])
         self.do_jump_right.play()
         self.do_jump = PygAnimation([(animation_jump, animation_koef)])
         self.do_jump.play()
 
-
-    def image_load(self, image):
-        self.image = pygame.image.load(image)
     @property
     def type(self):
         return self.__type
@@ -74,6 +65,7 @@ class Hero(Character):
     @property
     def flower_ability(self):
         return self.__flower_ability
+
     @flower_ability.setter
     def flower_ability(self, value):
         self.__flower_ability = value
@@ -88,6 +80,7 @@ class Hero(Character):
     @property
     def power(self):
         return self.__power
+
     @power.setter
     def power(self, value):
         self.__power = value
@@ -95,6 +88,7 @@ class Hero(Character):
     @property
     def side(self):
         return self.__side
+
     @side.setter
     def side(self, value):
         self.__side = value
@@ -102,6 +96,7 @@ class Hero(Character):
     @property
     def time_flower_activity(self):
         return self.__time_flower_activity
+
     @time_flower_activity.setter
     def time_flower_activity(self, value=0):
         self.__time_flower_activity = value
@@ -109,6 +104,7 @@ class Hero(Character):
     @property
     def time_mushroom_activity(self):
         return self.__time_mushroom_activity
+
     @time_mushroom_activity.setter
     def time_mushroom_activity(self, value=0):
         self.__time_mushroom_activity = value
@@ -123,6 +119,7 @@ class Hero(Character):
     @property
     def key_up(self):
         return self.__key_up
+
     @key_up.setter
     def key_up(self, value):
         self.__key_up = value
@@ -130,6 +127,7 @@ class Hero(Character):
     @property
     def key_left(self):
         return self.__key_left
+
     @key_left.setter
     def key_left(self, value):
         self.__key_left = value
@@ -137,6 +135,7 @@ class Hero(Character):
     @property
     def key_right(self):
         return self.__key_right
+
     @key_right.setter
     def key_right(self, value):
         self.__key_right = value
@@ -187,8 +186,6 @@ class Hero(Character):
                     self.do_stay_left.blit(self.image, (0, 0))
                 else:
                     self.do_stay_right.blit(self.image, (0, 0))
-
-
         if not self.on_ground:
             self.yvel += self.gravity
 

@@ -53,8 +53,9 @@ class Monster(Character):
         self.__alive = value
 
     def killed(self, monsters, entities, blocks):
-        monsters.remove(self)
         blocks.remove(self)
+        self.alive = False
         pygame.time.wait(1000)
         entities.remove(self)
+        monsters.remove(self)
         del self

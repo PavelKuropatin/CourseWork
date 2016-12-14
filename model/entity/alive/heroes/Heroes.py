@@ -74,3 +74,8 @@ class Heroes:
             self.lst[i].key_left=settings[i*4+1]
             self.lst[i].key_right=settings[i*4+2]
             self.lst[i].key_fire=settings[i*4+3]
+
+    def move_to_start(self):
+        for hero in self.lst:
+            hero.rect.x = hero.x
+            hero.rect.y = hero.y

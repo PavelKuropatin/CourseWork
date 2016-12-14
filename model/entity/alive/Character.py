@@ -1,4 +1,4 @@
-from pygame import *
+from pygame import sprite, Surface, Rect
 
 
 class Character(sprite.Sprite):
@@ -34,6 +34,7 @@ class Character(sprite.Sprite):
     @property
     def width(self):
         return self.__width
+
     @width.setter
     def width(self, value):
         self.__width = value
@@ -48,6 +49,7 @@ class Character(sprite.Sprite):
     @property
     def lifes(self):
         return self.__lifes
+
     @lifes.setter
     def lifes(self, value):
         self.__lifes = value
@@ -55,6 +57,7 @@ class Character(sprite.Sprite):
     @property
     def left(self):
         return self.__left
+
     @left.setter
     def left(self, value):
         self.__left = value
@@ -69,6 +72,7 @@ class Character(sprite.Sprite):
     @property
     def up(self):
         return self.__up
+
     @up.setter
     def up(self, value):
         self.__up = value
@@ -83,6 +87,7 @@ class Character(sprite.Sprite):
     @property
     def on_ground(self):
         return self.__on_ground
+
     @on_ground.setter
     def on_ground(self, value):
         self.__on_ground = value
